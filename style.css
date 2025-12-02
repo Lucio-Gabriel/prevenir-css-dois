@@ -2504,3 +2504,28 @@
   max-width: 60%;
 }
 
+.services-card-iefix {
+  width: 100%;
+  max-width: 100%;
+  flex: 1 1 100%; /* IE FIX */
+  box-sizing: border-box;
+}
+
+.services-card-iefix .services-card-list li {
+  margin-bottom: 0.35rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.services-card-iefix .services-card-list li::before {
+  color: var(--primary-red);
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+}
+
+.services-card-iefix .services-card-text {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
