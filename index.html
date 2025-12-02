@@ -1,0 +1,1689 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prevenir</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="font-family: 'Lato', sans-serif;">
+  <!-- HEADER -->
+  <div class="header-wrapper">
+    <div class="header-inner">
+      <div class="header-logo">
+        <img src="src/images/logo prevenir-01 (1).png" alt="logo-tipo">
+      </div>
+  
+      <nav class="header-nav">
+        <div class="header-nav-item">
+          <i class="fa-solid fa-phone header-nav-icon"></i>
+          <p class="header-nav-text">
+            CONTATO<br>
+            <span class="header-nav-highlight">(48) 3025-7498</span>
+          </p>
+        </div>
+  
+        <div class="contact-separator"></div>
+  
+        <div class="header-nav-item">
+          <i class="fa-solid fa-envelope header-nav-icon"></i>
+          <p class="header-nav-text">
+            EMAIL<br>
+            <span class="header-nav-highlight">comercial@prevenirsst.com.br</span>
+          </p>
+        </div>
+  
+        <div class="contact-separator"></div>
+  
+        <div class="header-nav-item">
+          <i class="bi bi-geo-alt-fill header-nav-icon"></i>
+          <p class="header-nav-text" style="margin-top:0.70rem;">
+            ENDEREÇO<br>
+            <span class="header-nav-highlight">Av. Rio Branco, 448. Sala 106</span>
+          </p>
+        </div>
+      </nav>
+  
+      <div class="header-actions">
+        <button id="menu-btn" class="header-menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL MENU MOBILE -->
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-header">
+      <img src="src/images/logo-white.png" alt="Medixo" class="mobile-menu-logo">
+      <button id="close-btn" class="mobile-menu-close">&times;</button>
+    </div>
+  
+    <nav class="mobile-nav">
+      <a href="#page-one">HOME</a>
+      <a href="#about">CLÍNICA</a>
+      <a href="#servicos">SERVIÇOS</a>
+      <a href="#localizacao">LOCALIZAÇÃO</a>
+      <a href="#contact">CONTATO</a>
+      <hr>
+    </nav>
+  </div>
+
+  <!--HEADER HOVER BRANCO -->
+  <header id="main-header" class="header-floating">
+    <div class="header-floating-bar" id="header-bg">
+      <div class="header-floating-inner">
+        <nav class="header-floating-nav" id="nav-links">
+          <div class="header-floating-nav-group">
+            <a href="#page-one" class="header-floating-link">
+              HOME <i class="bi bi-caret-down-fill"></i>
+            </a>
+            <ul class="header-floating-dropdown">
+              <li><a href="#page-one">Página inicial</a></li>
+            </ul>
+          </div>
+  
+          <div class="header-floating-nav-group">
+            <a href="#about" class="header-floating-link">
+              CLÍNICA <i class="bi bi-caret-down-fill"></i>
+            </a>
+            <ul class="header-floating-dropdown">
+              <li><a href="#about">Sobre Nós</a></li>
+              <li><a href="#specialists">Nossa Equipe</a></li>
+            </ul>
+          </div>
+  
+          <div class="header-floating-nav-group">
+            <a href="#servicos" class="header-floating-link">
+              SERVIÇOS <i class="bi bi-caret-down-fill"></i>
+            </a>
+            <ul class="header-floating-dropdown">
+              <li><a href="#servicos">Nossos Serviços</a></li>
+            </ul>
+          </div>
+  
+          <div class="header-floating-nav-group">
+            <a href="#localizacao" class="header-floating-link">
+              LOCALIZAÇÃO <i class="bi bi-caret-down-fill"></i>
+            </a>
+            <ul class="header-floating-dropdown">
+              <li><a href="#localizacao">Endereço</a></li>
+            </ul>
+          </div>
+  
+          <div class="header-floating-nav-group">
+            <a href="#contact" class="header-floating-link">CONTATOS</a>
+          </div>
+        </nav>
+  
+        <div class="header-floating-actions">
+          <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5548998120156"
+             target="_blank"
+             id="cta-btn"
+             class="header-floating-cta">
+            Agende Agora
+          </a>
+  
+          <a href="#"
+             class="header-floating-icon"
+             aria-label="Agende Agora">
+            <i class="bi bi-calendar-check"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5548998120156"
+    target="_blank"
+    role="button"
+    aria-label="Abrir conversa no WhatsApp"
+    class="whatsapp-fab">
+    <i class="fa-brands fa-whatsapp whatsapp-fab-icon" aria-hidden="true"></i>
+  </a>
+
+  <!-- HERO BANNER -->
+  <section id="page-one" class="hero-overlay-bg">
+    <div class="hero-banner-wrapper">
+      <div class="hero-banner-text">
+        <h1 class="hero-banner-title">
+          <span class="hero-banner-highlight">Prevenir</span><br class="hero-break-desktop">
+          Saúde Ocupacional
+        </h1>
+  
+        <p class="hero-banner-paragraph">
+          Cuidamos de pessoas com responsabilidade e profissionalismo, promovendo saúde, segurança e valorização do capital humano.
+        </p>
+  
+        <div class="hero-banner-actions">
+          <a href="#servicos" class="hero-banner-button">
+            Explorar Serviços
+          </a>
+        </div>
+      </div>
+  
+      <div class="hero-banner-media">
+        <img src="src/images/medicos.png" alt="Equipe de médicos da Clínica Prevenir" class="hero-banner-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Card Dados -->
+  <section id="stats-section" class="stats-display-section">
+    <div class="stats-display-grid">
+      <div class="stats-display-item">
+        <h3 class="stats-display-value">29 Anos</h3>
+        <p class="stats-display-label">De Experiência</p>
+      </div>
+      <div class="stats-display-item">
+        <h3 class="stats-display-value">+ de 200</h3>
+        <p class="stats-display-label">Condomínios Atendidos</p>
+      </div>
+      <div class="stats-display-item">
+        <h3 class="stats-display-value">+ de 7000</h3>
+        <p class="stats-display-label">Pacientes Atendidos</p>
+      </div>
+      <div class="stats-display-item">
+        <h3 class="stats-display-value">+ 680</h3>
+        <p class="stats-display-label">Empresas Assessoradas</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE HOSPITAL -->
+  <section id="about" class="about-section">
+    <div class="clinic-overview-container">
+      <div class="clinic-overview-flex">
+        <div class="clinic-overview-media">
+          <div style="display:flex; align-items:center;">
+            <div class="clinic-overview-image-wrapper">
+              <img src="src/images/imagem (4).jpeg"
+                   alt="Médica examinando paciente"
+                   class="clinic-overview-image">
+            </div>
+          </div>
+          <div class="clinic-overview-spacing"></div>
+        </div>
+    
+        <div class="clinic-overview-content">
+          <p class="clinic-overview-label">SOBRE A CLÍNICA</p>
+          <div class="clinic-overview-bar"></div>
+          <h2 class="clinic-overview-title">Prevenir</h2>
+    
+          <p class="clinic-overview-paragraph">
+            A Prevenir Saúde Ocupacional foi fundada em 1996 com o propósito de oferecer serviços em Saúde
+            Ocupacional e Segurança do Trabalho de maneira diferenciada. Desde o início, atuamos com ética,
+            qualidade e comprometimento, proporcionando uma assessoria completa, personalizada e adaptada às
+            particularidades de cada segmento.
+          </p>
+    
+          <p class="clinic-overview-paragraph">
+            Acreditamos que parcerias sólidas se constroem com alinhamento, colaboração e uma gestão transparente e
+            eficiente. Nosso papel vai além da prestação de serviços em SST: buscamos ser um aliado estratégico para
+            nossos clientes.
+          </p>
+    
+          <p class="clinic-overview-paragraph">
+            Nossa essência é cuidar de pessoas com responsabilidade e profissionalismo, entregando resultados
+            consistentes, que ultrapassam a formalidade de documentos e refletem em saúde, segurança e valorização do
+            capital humano. Com uma equipe experiente, entregamos soluções completas em SST para proteger sua empresa
+            e seus colaboradores.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="differentials-shell">
+      <div class="differentials-heading">
+        <h2 class="differentials-title">Nossos Diferenciais</h2>
+      </div>
+    
+      <div class="differentials-grid">
+        <div class="differential-card">
+          <img src="src/images/Enfermeiros.jpeg" alt="doutores">
+          <div class="differential-card-body">
+            <p class="differential-card-text">
+              Na Prevenir Saúde Ocupacional, contamos com estrutura própria, confortável, onde todos os serviços são
+              realizados diretamente por nossa equipe técnica, sem intermediações remotas ou atendimentos por ordem de
+              chegada. Trabalhamos exclusivamente com clientes credenciados, mediante agendamento prévio, garantindo
+              organização e qualidade no atendimento.
+            </p>
+            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5548998120156" target="_blank" class="differential-card-cta">
+              Entre em contato
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+    
+        <div class="differential-card">
+          <img src="src/images/imagem (3).jpeg" alt="">
+          <div class="differential-card-body">
+            <p class="differential-card-text">
+              Valorizamos o tempo de nossos clientes, assegurando pontualidade e evitando esperas desnecessárias. Mantemos
+              um canal de comunicação ágil e próximo, sempre prontos para esclarecer dúvidas e oferecer suporte completo.
+            </p>
+            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5548998120156" target="_blank" class="differential-card-cta">
+              Entre em contato
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+    
+        <div class="differential-card">
+          <img src="src/images/ESTETO.jpeg" alt="">
+          <div class="differential-card-body">
+            <p class="differential-card-text">
+              Nossos profissionais são experientes, altamente qualificados e atuam com dedicação em cada processo,
+              garantindo precisão, agilidade e excelência em todas as entregas. Acreditamos que a credibilidade se constrói
+              em cada detalhe.
+            </p>
+            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5548998120156" target="_blank" class="differential-card-cta">
+              Entre em contato
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+    
+        <div class="differential-card">
+          <img src="src/images/ESTETO2.jpeg" alt="">
+          <div class="differential-card-body">
+            <p class="differential-card-text">
+              Prezamos por um atendimento humano e individualizado, pautado no respeito, na acessibilidade e na escuta
+              ativa. Nossas consultas vão além da emissão de laudos e documentos: oferecemos atenção real ao trabalhador,
+              com soluções que unem conformidade legal, saúde e bem-estar.
+            </p>
+            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5548998120156" target="_blank" class="differential-card-cta">
+              Entre em contato
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+    
+        <div class="differential-card">
+          <img src="src/images/BLOCODERECEITAS.jpeg" alt="">
+          <div class="differential-card-body">
+            <p class="differential-card-text">
+              Nossa equipe técnica e operacional está à disposição para oferecer assessoria completa, incluindo relatórios
+              de controle de vencimento de exames ocupacionais, gestão do e-Social e demais demandas em Saúde e Segurança do
+              Trabalho. Além de ASOS lançados com biometria e segurança digital no portal do cliente, maior segurança e
+              agilidade para as empresas.
+            </p>
+            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5548998120156" target="_blank" class="differential-card-cta">
+              Entre em contato
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="services-panel-section">
+    <div class="services-panel-gradient"></div>
+  
+    <div class="services-panel-container">
+      <div class="services-panel-header">
+        <p class="services-panel-label">SOBRE A CLÍNICA </p>
+        <div class="services-panel-bar"></div>
+        <h2 class="services-panel-title">Nossos Serviços</h2>
+      </div>
+  
+      <div class="services-grid">
+        <div class="services-card">
+          <div class="services-card-icon">
+            <!-- ícone -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 21h18"/>
+              <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+              <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+              <path d="M10 9h4"/>
+              <path d="M12 7v4"/>
+            </svg>
+          </div>
+          <h3 class="services-card-title">PCMSO</h3>
+          <p class="services-card-text">
+            O PCMSO (Programa de Controle Médico de Saúde Ocupacional) é um programa obrigatório previsto na NR-7 que tem como objetivo preservar a saúde dos trabalhadores. 
+          </p>
+        </div>
+
+        <div class="services-card">
+          <div class="services-card-icon">
+            <!-- ícone -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 21h18"/>
+              <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+              <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+              <path d="M10 9h4"/>
+              <path d="M12 7v4"/>
+            </svg>
+          </div>
+          <h3 class="services-card-title">LTCAT</h3>
+          <p class="services-card-text">
+            Laudo Técnico das Condições Ambientais do Trabalho. Tem finalidade Previdenciária. É o laudo que identifica se o trabalhador está exposto a agentes nocivos no ambiente de trabalho, servindo de base para aposentadoria especial e para a gestão da saúde ocupacional.
+          </p>
+        </div>
+
+        <div class="services-card">
+          <div class="services-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 21h18"/>
+              <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+              <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+              <path d="M10 9h4"/>
+              <path d="M12 7v4"/>
+            </svg>
+          </div>
+          <h3 class="services-card-title">LTIP</h3>
+          <p class="services-card-text">
+            Laudo Técnico de Insalubridade e Periculosidade é o documento que avalia se as atividades do trabalhador expõem a condições insalubres ou perigosas, servindo de base para o pagamento de adicionais previstos em lei. Tem finalidade Trabalhista.
+          </p>
+        </div>
+
+        <div class="services-card">
+          <div class="services-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 21h18"/>
+              <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+              <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+              <path d="M10 9h4"/>
+              <path d="M12 7v4"/>
+            </svg>
+          </div>
+          <h3 class="services-card-title">PGR</h3>
+          <p class="services-card-text">
+            Programa de Gerenciamento de Risco, previsto na NR-1 da Portaria MTE nº 6.734/1978 e tem como objetivo identificar, avaliar e controlar os riscos no ambiente de trabalho. Possui caráter dinâmico e de ser utilizado sempre que houver mudanças no ambiente, processo e nos riscos.
+          </p>
+        </div>
+
+        <div class="services-card">
+          <div class="services-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 21h18"/>
+              <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+              <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+              <path d="M10 9h4"/>
+              <path d="M12 7v4"/>
+            </svg>
+          </div>
+          <h3 class="services-card-title">PPP</h3>
+          <p class="services-card-text">
+            Perfil Profissiográfico Previdenciário, é o documento previdenciário que registra o histórico laboral, exposição. Serve para aposentadoria especial. 
+          </p>
+        </div>
+
+        <div class="services-card">
+          <div class="services-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 21h18"/>
+              <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+              <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+              <path d="M10 9h4"/>
+              <path d="M12 7v4"/>
+            </svg>
+          </div>
+          <h3 class="services-card-title">EXAMES OCUPACIONAIS PARA EMISSÃO DO ASO (ATESTADO DE SAÚDE OCUPACIONAL)</h3>
+          <p class="services-card-text">
+            São exames médicos obrigatórios de acordo com o PCMSO; tem como objetivo avaliar a saúde do trabalhador, e assim estabelecer se há ou não aptidão para as funções laborais. 
+        </div>
+
+        <div class="services-card">
+          <div class="services-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 21h18"/>
+              <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+              <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+              <path d="M10 9h4"/>
+              <path d="M12 7v4"/>
+            </svg>
+          </div>
+          <h3 class="services-card-title">TIPOS DE EXAMES OCUPACIONAIS</h3>
+          <p class="services-card-text">
+             - ADMISSIONAL <br>
+             - DEMISSIONAL  <br>
+             - RETORNO AO TRABALHO <br>
+             - MUDANÇA DE FUNÇÃO <br>
+             - PERIÓDICO ANUAL <br>
+          </p>
+        </div>
+
+        <div class="services-card">
+          <div class="services-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 21h18"/>
+              <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+              <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+              <path d="M10 9h4"/>
+              <path d="M12 7v4"/>
+            </svg>
+          </div>
+          <h3 class="services-card-title">EXAMES COMPLEMENTARES DE ACORDO COM A FUNÇÃO</h3>
+          <p class="services-card-text">
+             São exames de acordo com o PCMSO e com os riscos apresentados no PGR que servem para confirmar, descartar ou monitorar os riscos do amniente de trabalho. <br>
+             Exemplo: audiometria, hemograma, glicemia
+          </p>
+        </div>
+
+        <div class="services-card">
+          <div class="services-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 21h18"/>
+              <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+              <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+              <path d="M10 9h4"/>
+              <path d="M12 7v4"/>
+            </svg>
+          </div>
+          <h3 class="services-card-title">GESTÃO DE ENVIOS AO e-SOCIAL</h3>
+          <p class="services-card-text">
+             Envios dos eventos (informações) para a plataforma governamental que unifica as informações trabalhistas, previdenciárias e fiscais das empresas e seus trabalhadores. A parte que compete a SST nos envios sãos os eventos: S2210 (CAT), S 2220 – Monitoramento de Saúde do trabalhador , S2240 – Condições Ambientais do Trabalho, fatores de risco. 
+          </p>
+        </div>
+
+        <!--
+        <div class="services-card services-card-full">
+          <div class="services-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 21h18"/>
+              <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+              <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+              <path d="M10 9h4"/>
+              <path d="M12 7v4"/>
+            </svg>
+          </div>
+          <h3 class="services-card-title">ELABORAÇÃO DO LEVANTAMENTO PSICOSSOCIAL, COM BASE NA NR.</h3>
+          <p class="services-card-text">
+             O Levantamento Psicossocial é uma avaliação dos fatores do trabalho que podem afetar a saúde mental e emocional dos colaboradores, como estresse, assédio, pressão por metas e relações interpessoais. Fazemos o mapeamento, identificação e levantamento. Estamos em constante atualização para estarmos oferecendo um serviço diferenciado e a frente do ofertado pelo mercado.
+          </p>
+        </div>
+        -->
+      </div>
+
+      <div class="services-card" style="margin-top: 30px;">
+        <div class="services-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 21h18"/>
+            <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+            <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+            <path d="M10 9h4"/>
+            <path d="M12 7v4"/>
+          </svg>
+        </div>
+
+        <h3 class="services-card-title">
+          ELABORAÇÃO DO LEVANTAMENTO PSICOSSOCIAL, COM BASE NA NR.
+        </h3>
+
+        <p class="services-card-text">
+          O Levantamento Psicossocial é uma avaliação dos fatores do trabalho que podem afetar a saúde mental e emocional dos colaboradores, como estresse, assédio, pressão por metas e relações interpessoais. Fazemos o mapeamento, identificação e levantamento. Estamos em constante atualização para estarmos oferecendo um serviço diferenciado e a frente do ofertado pelo mercado.
+        </p>
+      </div>
+
+      <div class="services-card" style="margin-top: 30px;">
+        <div class="services-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 21h18"/>
+            <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+            <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+            <path d="M10 9h4"/>
+            <path d="M12 7v4"/>
+          </svg>
+        </div>
+
+        <h3 class="services-card-title">
+          OUTROS SERVIÇOS OFERECIDOS
+        </h3>
+
+        <ul class="services-card-list">
+          <li>Documentos atualizados em período real no portal do cliente;</li>
+          <span style="line-height: 1.6">
+            Atualização dentro do período de vigência; <br>
+            Facilitando o acesso e controle das informações;
+          </span>
+          <li>Orientação técnica contínua relacionada ao nosso escopo de serviços</li>
+          <li>Treinamentos / orientação de EPIs</li>
+          <li>Assessoria técnica e médica especializada em SST</li>
+          <li>Controle de vencimento de documentos e exames periódicos</li>
+          <li>Assessoria em perícias (assistência técnica)</li>
+          <li>Palestras, campanhas educativas e ações de saúde</li>
+          <li>Treinamento de CIPA</li>
+          <li>Emissão de pareceres de saúde ocupacional e segurança do trabalho</li>
+          <li>Emissão de laudos e parecer PCD, PNE</li>
+          <li>Consultoria em assuntos relacionados à saúde ocupacional e segurança do trabalho</li>
+          <li>Atestado de saúde para aptidão para manipulação alimentos</li>
+          <li>Atestado médico para concursos públicos</li>
+          <li>Análise ergonômica do ambiente de trabalho</li>
+        </ul>
+      </div>
+
+    </div>
+  
+    <div class="services-cta-wrapper">
+      <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5548998120156" target="_blank" class="services-cta-button">
+        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+          class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+          <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+        </svg>
+        <span>Entre em contato direto conosco e solicite uma proposta personalizada para sua empresa/condomínios</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FUNCIONARIOS CSS -->
+  <section id="specialists" class="team-section">
+    <div class="team-shell">
+      <div class="team-intro-block">
+        <p class="team-intro-label">SOBRE A CLÍNICA</p>
+        <div class="team-highlight-line"></div>
+        <h2 class="team-intro-title">Nossa Equipe</h2>
+  
+        <div class="team-description-panel">
+          <p>
+            Na <span class="team-card-role" style="color:var(--primary); font-weight:600;">Prevenir Saúde Ocupacional</span>, contamos com uma equipe multidisciplinar composta por médicos do trabalho, técnicos de segurança e profissionais de apoio administrativo, todos com ampla experiência em Saúde e Segurança do Trabalho.
+          </p>
+          <p>
+            Nossa equipe técnica é formada por profissionais altamente qualificados, com vasta experiência e profundo conhecimento em Medicina e Segurança do Trabalho. Com atuação consolidada em diversos segmentos, oferecem um olhar rigoroso e estratégico, garantindo excelência em perícias e na gestão da saúde e segurança ocupacional.
+          </p>
+          <p>
+            Nosso objetivo é oferecer um atendimento de excelência, garantindo suporte técnico ágil e eficaz. Atuamos com profissionalismo, precisão e proatividade, sempre buscando desenvolver soluções personalizadas que atendam às necessidades de cada cliente com qualidade, atenção, agilidade e assertividade.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="team-shell team-grid-shell">
+      <div class="team-card-grid">
+        <div class="team-card">
+          <div class="team-card-avatar">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512.000000 512.000000"
+                preserveAspectRatio="xMidYMid meet">
+
+                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                fill="#ffffff" stroke="none">
+                <path d="M1957 5104 c-500 -77 -921 -436 -1070 -910 -62 -197 -62 -194 -62
+                -854 l0 -605 23 -67 c56 -161 173 -281 330 -338 l62 -23 -74 -32 c-418 -181
+                -699 -523 -798 -970 -17 -76 -21 -139 -25 -397 l-5 -308 -52 0 c-112 0 -212
+                -55 -259 -144 -19 -35 -22 -56 -22 -156 0 -99 3 -121 22 -155 25 -47 74 -95
+                123 -121 34 -18 113 -19 2410 -19 2297 0 2376 1 2410 19 49 26 98 74 123 121
+                25 48 35 197 18 261 -15 56 -64 120 -115 152 l-44 27 -4 85 c-6 120 -42 181
+                -138 239 -29 17 -36 29 -46 78 -54 259 -260 472 -512 529 l-72 16 0 59 c0 75
+                -28 113 -85 113 -57 0 -85 -38 -85 -113 l0 -58 -62 -16 c-35 -9 -73 -19 -84
+                -22 -17 -5 -23 -1 -28 22 -4 15 -25 66 -47 112 -134 286 -379 521 -671 641
+                l-88 36 54 17 c143 46 274 174 337 332 l24 60 3 591 c3 656 0 707 -59 890 -39
+                123 -92 235 -160 339 -65 98 -258 293 -354 357 -279 184 -609 260 -918 212z
+                m343 -168 c171 -26 343 -93 484 -189 79 -53 205 -175 267 -256 62 -82 140
+                -234 173 -333 54 -165 57 -223 54 -843 l-3 -570 -29 -62 c-34 -73 -113 -153
+                -183 -186 -43 -20 -68 -22 -235 -25 l-187 -4 -31 44 c-60 82 -62 74 42 179
+                111 112 145 171 212 375 l46 141 57 17 c78 25 172 117 202 199 28 77 28 168
+                -1 244 -31 85 -123 175 -205 200 -54 16 -65 25 -110 83 -107 140 -219 200
+                -372 200 -314 0 -606 104 -706 251 -39 58 -54 68 -93 69 -48 0 -77 -34 -86
+                -99 -13 -99 -68 -171 -161 -212 -91 -39 -95 -47 -95 -170 l0 -108 -60 -27
+                c-70 -31 -141 -101 -172 -171 -17 -37 -22 -68 -22 -138 -1 -79 3 -97 27 -145
+                39 -75 91 -127 162 -161 33 -16 65 -29 72 -29 6 0 26 -44 44 -97 81 -246 134
+                -340 251 -447 l71 -65 -26 -43 c-53 -91 -51 -90 -254 -86 l-178 3 -63 34 c-78
+                42 -144 114 -174 189 l-23 57 0 580 c0 626 1 640 55 809 95 294 308 543 584
+                680 125 62 236 95 396 120 59 8 182 5 270 -8z m-522 -771 c152 -109 432 -185
+                685 -185 125 -1 195 -41 273 -157 59 -89 74 -103 108 -103 65 -1 143 -54 165
+                -113 23 -59 9 -130 -32 -176 -27 -29 -93 -60 -128 -61 -56 0 -74 -29 -139
+                -225 -68 -204 -103 -269 -191 -350 -67 -64 -126 -104 -220 -152 -68 -35 -81
+                -38 -159 -38 -75 0 -93 4 -152 32 -162 76 -296 196 -353 314 -19 40 -57 141
+                -86 226 -54 164 -73 193 -123 193 -43 1 -108 32 -134 65 -70 89 -43 211 58
+                263 24 12 58 22 75 22 67 1 85 39 85 177 l0 108 45 24 c44 23 165 142 165 161
+                0 15 6 13 58 -25z m132 -1680 c122 -62 251 -72 377 -30 43 15 88 33 100 40 20
+                14 23 12 47 -29 13 -23 44 -65 68 -92 l44 -49 -204 -563 c-113 -310 -208 -560
+                -212 -555 -4 4 -98 258 -208 564 l-202 556 45 48 c24 27 54 68 67 92 13 24 24
+                43 26 43 1 0 25 -11 52 -25z m1187 -394 c106 -51 174 -95 261 -170 129 -111
+                253 -287 307 -436 l28 -75 -71 -70 c-106 -105 -181 -246 -199 -375 -4 -35 -10
+                -45 -30 -50 -14 -3 -47 -28 -73 -54 -55 -55 -80 -120 -80 -208 l0 -53 -1366 0
+                -1366 0 5 298 c6 373 21 452 127 667 108 217 292 404 505 512 82 42 243 105
+                256 101 5 -2 -32 -72 -82 -155 -81 -136 -91 -158 -91 -201 0 -77 25 -114 125
+                -181 l47 -32 -30 -38 c-53 -65 -53 -155 0 -214 15 -18 187 -138 380 -267 275
+                -183 358 -234 383 -234 25 0 111 53 397 245 334 223 367 248 388 289 30 59 24
+                118 -19 179 -24 34 -28 46 -17 52 7 4 37 25 67 46 70 49 93 92 88 160 -3 44
+                -17 74 -92 200 -48 81 -90 151 -92 155 -6 12 152 -48 244 -91z m-1313 -440
+                c97 -266 175 -485 173 -487 -2 -2 -105 65 -230 148 l-227 151 60 63 c92 96 86
+                123 -53 215 -51 34 -96 65 -101 70 -5 5 33 79 90 173 54 91 102 162 105 158 4
+                -4 87 -225 183 -491z m989 333 c55 -91 97 -167 95 -168 -1 -2 -46 -32 -98 -66
+                -111 -74 -119 -83 -120 -130 0 -30 9 -44 55 -90 30 -30 55 -58 55 -62 0 -4
+                -101 -75 -225 -158 -124 -83 -225 -147 -225 -143 0 15 354 983 359 983 3 0 50
+                -75 104 -166z m1505 -653 c162 -64 275 -194 316 -363 l6 -28 -504 0 -504 0 10
+                42 c33 148 165 294 318 352 100 37 259 36 358 -3z m478 -594 c19 -22 24 -39
+                24 -83 l0 -54 -685 0 -685 0 0 48 c0 56 17 92 50 109 20 10 161 12 648 10
+                l624 -2 24 -28z m170 -340 c20 -24 24 -39 24 -98 0 -65 -2 -73 -29 -100 l-29
+                -29 -2332 0 -2332 0 -29 29 c-26 27 -29 36 -29 98 0 74 15 107 54 123 12 5
+                1051 8 2349 7 l2329 -2 24 -28z"/>
+                <path d="M815 1098 c-51 -29 -61 -93 -20 -133 24 -25 25 -25 227 -25 212 1
+                223 3 246 47 19 35 14 63 -17 94 l-29 29 -194 0 c-126 -1 -200 -5 -213 -12z"/>
+                </g>
+                </svg>
+          </div>
+          <h3 class="team-card-name">Mirela</h3>
+          <p class="team-card-role">Recepcionista</p>
+          <a href="mailto:recepcao@prevenirsst.com.br" class="team-card-email">
+            E-mail: <span>recepcao@prevenirsst.com.br</span>
+          </a>
+        </div>
+  
+        <div class="team-card">
+          <div class="team-card-avatar">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512.000000 512.000000"
+                preserveAspectRatio="xMidYMid meet">
+
+                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                fill="#ffffff" stroke="none">
+                <path d="M920 4807 c-17 -9 -34 -34 -53 -83 l-28 -70 -90 -36 -91 -35 -68 29
+                c-64 26 -72 27 -102 14 -43 -18 -215 -194 -223 -228 -5 -18 2 -47 23 -93 l29
+                -67 -33 -76 c-19 -42 -34 -82 -34 -89 0 -6 -32 -24 -71 -39 -39 -15 -77 -37
+                -85 -48 -21 -30 -20 -313 1 -343 8 -11 44 -31 81 -44 36 -13 69 -30 72 -39 2
+                -8 19 -49 37 -90 l32 -76 -28 -64 c-16 -36 -28 -74 -29 -84 0 -11 46 -66 112
+                -133 128 -129 134 -131 234 -87 l58 25 65 -29 c36 -17 76 -33 88 -37 15 -4 29
+                -26 48 -76 37 -97 48 -101 230 -97 168 4 172 5 207 104 22 62 24 64 73 80 27
+                9 67 25 89 36 l38 20 58 -26 c99 -45 109 -41 232 82 123 123 126 131 82 226
+                l-26 57 33 82 c18 45 38 87 43 94 6 6 36 21 66 33 93 36 90 30 90 216 0 162 0
+                163 -25 182 -14 11 -48 28 -76 38 -27 10 -53 23 -57 29 -4 5 -23 47 -41 92
+                l-32 83 25 56 c43 94 41 102 -80 225 -59 59 -117 110 -130 113 -16 4 -48 -4
+                -93 -23 l-68 -30 -89 38 -89 39 -23 58 c-39 99 -49 104 -215 104 -94 0 -150
+                -5 -167 -13z m259 -217 l27 -65 84 -31 c47 -16 108 -42 137 -57 63 -33 73 -33
+                143 -2 l55 24 48 -47 c26 -25 47 -52 47 -60 0 -7 -9 -30 -20 -52 -27 -53 -25
+                -87 9 -151 16 -30 38 -82 49 -116 30 -91 36 -98 102 -123 l60 -22 0 -73 0 -73
+                -60 -22 c-67 -25 -71 -31 -106 -133 -13 -38 -35 -89 -49 -113 -30 -51 -32 -92
+                -5 -144 11 -22 20 -45 20 -52 0 -7 -21 -34 -46 -59 l-47 -48 -55 25 c-69 30
+                -81 30 -145 -3 -29 -14 -88 -39 -131 -54 -44 -16 -83 -32 -88 -37 -4 -4 -19
+                -34 -32 -67 l-24 -60 -70 -3 -69 -3 -23 60 c-12 33 -29 66 -38 74 -10 7 -53
+                26 -97 42 -44 15 -98 38 -121 51 -52 30 -76 30 -143 -2 l-55 -25 -50 50 -49
+                50 26 59 c15 33 27 65 27 73 0 7 -15 42 -34 78 -18 36 -42 93 -52 126 -23 77
+                -34 90 -105 117 l-59 23 0 72 0 71 48 16 c73 25 88 40 113 113 12 38 37 98 55
+                135 19 37 34 73 34 79 0 6 -12 38 -27 71 l-26 59 49 50 50 50 57 -26 c32 -14
+                66 -25 76 -25 10 0 48 16 85 35 37 19 93 42 124 51 73 21 85 32 112 105 l23
+                60 69 -3 69 -3 28 -65z"/>
+                <path d="M956 4314 c-223 -54 -386 -264 -386 -499 0 -387 410 -633 754 -453
+                188 99 301 323 267 529 -49 301 -341 494 -635 423z m275 -177 c74 -36 136 -99
+                173 -177 62 -131 33 -290 -72 -393 -26 -25 -74 -59 -107 -74 -51 -24 -72 -28
+                -145 -28 -70 1 -94 5 -140 27 -77 36 -131 86 -171 160 -32 60 -34 68 -34 163
+                0 90 3 105 27 152 74 139 188 206 339 200 58 -3 90 -10 130 -30z"/>
+                <path d="M3277 4718 c-9 -7 -36 -62 -60 -123 l-43 -110 -87 -31 c-49 -18 -118
+                -46 -153 -64 l-66 -32 -104 46 c-58 25 -117 46 -132 46 -21 0 -59 -33 -184
+                -158 -138 -138 -158 -162 -158 -190 0 -17 20 -77 45 -133 l45 -100 -34 -67
+                c-19 -37 -46 -103 -61 -147 -16 -44 -33 -85 -39 -91 -6 -6 -45 -23 -86 -39
+                -116 -43 -136 -54 -149 -81 -7 -16 -11 -99 -11 -233 0 -253 -5 -242 138 -297
+                53 -20 102 -42 108 -48 6 -6 23 -47 39 -91 15 -44 42 -110 61 -147 l33 -66
+                -44 -99 c-69 -151 -72 -140 108 -319 95 -96 162 -155 180 -160 21 -5 54 5 137
+                41 l109 48 83 -40 c46 -22 115 -51 153 -63 l71 -23 38 -101 c59 -156 38 -146
+                306 -146 165 0 231 3 243 13 10 6 37 62 60 122 l44 110 84 30 c46 17 116 46
+                156 64 l71 33 103 -46 c56 -25 114 -46 128 -46 18 0 62 37 177 151 84 84 158
+                164 164 180 10 24 6 40 -38 141 l-49 113 38 77 c21 43 50 109 63 149 13 39 28
+                74 32 78 5 5 55 25 112 46 59 23 110 48 118 59 21 30 21 453 0 482 -8 10 -65
+                39 -126 64 l-112 45 -25 75 c-13 41 -42 109 -63 151 l-38 77 49 110 c34 77 48
+                119 44 135 -4 13 -77 95 -164 181 -121 119 -163 156 -183 156 -14 0 -72 -21
+                -129 -46 l-103 -45 -78 36 c-42 20 -112 49 -154 63 l-76 27 -44 110 c-24 60
+                -51 115 -60 122 -25 18 -463 18 -487 1z m423 -246 c20 -51 45 -101 55 -111 11
+                -10 60 -30 108 -45 49 -15 132 -49 185 -77 53 -27 107 -49 120 -49 13 0 66 19
+                119 42 l94 41 100 -99 100 -100 -46 -99 c-24 -55 -45 -106 -45 -113 0 -8 20
+                -51 44 -95 25 -45 61 -131 81 -192 21 -60 44 -118 52 -127 9 -10 60 -34 114
+                -55 l99 -38 0 -140 0 -140 -99 -38 c-54 -21 -106 -45 -114 -55 -9 -9 -29 -60
+                -46 -113 -17 -52 -53 -139 -81 -193 -27 -53 -50 -103 -50 -109 0 -7 21 -57 45
+                -112 l46 -99 -100 -100 -100 -99 -94 41 c-53 23 -106 42 -119 42 -13 0 -67
+                -22 -120 -49 -53 -28 -136 -62 -185 -77 -48 -15 -97 -35 -108 -46 -11 -10 -36
+                -60 -56 -111 l-35 -92 -143 0 -142 0 -42 105 -42 105 -110 37 c-60 20 -150 57
+                -200 83 -49 25 -100 45 -112 45 -12 0 -65 -19 -118 -42 l-97 -41 -98 99 -98
+                99 44 99 c24 54 44 106 44 116 0 9 -22 59 -49 111 -27 52 -61 132 -76 179 -41
+                133 -37 128 -155 175 l-105 41 -3 139 -2 140 100 38 c55 21 108 47 118 57 10
+                11 26 51 36 90 10 39 45 125 77 190 33 66 59 126 59 134 0 7 -20 58 -44 112
+                l-44 99 98 99 99 100 96 -42 c53 -23 107 -42 120 -42 13 0 59 19 102 42 43 24
+                132 61 198 83 l120 40 32 80 c18 44 37 92 42 108 l10 28 143 -3 142 -3 36 -93z"/>
+                <path d="M3375 4026 c-260 -52 -469 -209 -584 -438 -73 -146 -86 -204 -86
+                -373 0 -159 14 -224 71 -344 248 -527 933 -642 1335 -225 157 164 229 342 229
+                569 0 271 -115 500 -334 665 -66 50 -204 115 -287 135 -92 22 -259 28 -344 11z
+                m359 -184 c193 -66 338 -210 414 -410 23 -60 26 -81 27 -207 0 -118 -4 -151
+                -22 -210 -67 -210 -248 -383 -463 -441 -80 -21 -243 -24 -320 -5 -136 34 -282
+                125 -361 228 -62 79 -82 115 -115 203 -25 68 -28 88 -28 210 -1 116 2 145 22
+                205 61 183 181 318 356 401 150 71 331 81 490 26z"/>
+                <path d="M630 2259 c-19 -6 -89 -24 -154 -41 -100 -26 -126 -37 -159 -67 -48
+                -43 -67 -85 -67 -147 0 -27 73 -327 180 -742 198 -765 190 -744 280 -789 60
+                -31 92 -29 265 15 176 46 206 59 245 113 41 57 47 112 22 212 -12 45 -18 85
+                -14 88 4 4 37 14 74 24 l66 17 505 -290 c338 -196 528 -299 578 -316 94 -31
+                204 -42 289 -26 36 6 358 98 715 205 358 107 751 224 875 260 124 37 244 78
+                267 91 106 61 177 225 153 352 -20 109 -81 185 -189 236 -58 27 -78 31 -175
+                34 -60 3 -142 -1 -182 -8 -40 -6 -302 -74 -582 -150 -279 -76 -530 -141 -556
+                -145 l-48 -8 31 44 c66 90 77 206 28 312 -37 82 -78 121 -190 180 -162 86
+                -258 145 -486 302 -228 155 -255 172 -341 201 -80 27 -254 25 -375 -5 -97 -23
+                -723 -191 -741 -198 -7 -3 -18 24 -29 66 -9 39 -30 88 -45 110 -51 69 -143 96
+                -240 70z m108 -161 c5 -7 90 -323 188 -701 158 -611 176 -690 162 -703 -19
+                -19 -276 -86 -305 -79 -15 4 -25 17 -32 43 -243 938 -341 1325 -341 1345 0 14
+                4 29 10 32 15 9 262 73 286 74 12 1 26 -5 32 -11z m1315 -51 c31 -14 147 -88
+                259 -165 223 -154 338 -226 477 -298 132 -68 173 -123 156 -210 -8 -46 -58
+                -101 -103 -113 -70 -20 -127 5 -460 203 -96 57 -173 96 -189 96 -61 0 -100
+                -93 -55 -132 27 -24 331 -203 455 -268 226 -119 361 -154 500 -132 39 6 304
+                75 587 153 489 133 521 141 631 146 93 5 126 2 167 -11 122 -41 156 -181 68
+                -281 -31 -36 -38 -39 -916 -302 -884 -265 -885 -266 -980 -266 -72 0 -109 5
+                -153 21 -31 11 -180 91 -330 178 -149 87 -371 215 -492 285 -313 181 -274 167
+                -391 135 -53 -15 -100 -23 -104 -19 -4 4 -51 179 -104 387 -54 208 -100 384
+                -102 391 -3 7 5 15 18 17 13 3 186 49 385 102 199 54 384 101 410 106 85 16
+                205 5 266 -23z"/>
+                <path d="M567 1948 c-9 -7 -21 -25 -26 -40 -30 -79 74 -143 134 -83 51 50 17
+                135 -54 135 -20 0 -45 -6 -54 -12z"/>
+                </g>
+              </svg>
+          </div>
+          <h3 class="team-card-name">Isadora</h3>
+          <p class="team-card-role">Gestão operacional e e-Social</p>
+          <a href="mailto:operacional@prevenirsst.com.br" class="team-card-email">
+            E-mail: <span>operacional@prevenirsst.com.br</span>
+          </a>
+        </div>
+  
+        <div class="team-card">
+          <div class="team-card-avatar">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512.000000 512.000000"
+                preserveAspectRatio="xMidYMid meet">
+
+                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                fill="#ffffff" stroke="none">
+                <path d="M1796 5018 c-17 -15 -44 -71 -77 -158 -28 -74 -56 -140 -62 -146 -7
+                -6 -50 -24 -97 -38 -47 -15 -141 -54 -209 -87 l-124 -59 -135 60 c-74 34 -148
+                64 -164 67 -27 5 -43 -8 -239 -203 -115 -115 -212 -219 -215 -231 -4 -14 17
+                -74 60 -171 l66 -150 -58 -119 c-32 -66 -71 -163 -87 -216 l-30 -96 -148 -58
+                c-100 -38 -155 -65 -168 -81 -18 -23 -19 -44 -19 -307 0 -264 1 -284 19 -307
+                13 -17 65 -42 158 -77 76 -30 143 -59 149 -65 6 -6 24 -49 38 -96 15 -47 54
+                -141 87 -208 l59 -124 -66 -150 c-43 -97 -64 -157 -60 -171 8 -33 418 -437
+                443 -437 11 0 86 29 166 65 l146 64 123 -59 c68 -32 161 -71 208 -86 47 -15
+                90 -32 97 -38 6 -6 34 -72 62 -146 33 -87 60 -143 77 -157 25 -23 29 -23 313
+                -23 269 0 289 1 308 19 18 17 35 57 113 261 18 46 39 62 98 75 l32 7 0 -145
+                c0 -169 -3 -164 118 -212 64 -26 77 -35 85 -60 5 -17 25 -67 44 -113 l35 -83
+                -31 -70 c-51 -114 -51 -115 97 -262 100 -99 133 -127 154 -127 15 0 61 16 103
+                35 l77 35 51 -27 c29 -14 78 -35 111 -47 l58 -21 30 -75 c46 -120 46 -120 254
+                -120 206 0 202 -2 249 121 27 73 31 78 69 89 23 7 73 27 113 45 l71 33 74 -34
+                c115 -53 112 -54 260 94 100 100 128 134 128 155 0 14 -15 61 -34 103 l-34 76
+                33 72 c18 39 38 89 45 112 11 38 16 42 89 69 123 47 121 43 121 249 0 208 0
+                209 -120 254 l-75 28 -26 69 c-14 39 -35 89 -47 112 l-22 41 35 77 c19 42 35
+                88 35 102 0 20 -30 56 -127 155 -146 148 -146 148 -261 97 l-71 -32 -53 23
+                c-29 13 -80 33 -113 45 l-60 22 -30 76 c-48 119 -44 117 -208 117 -124 0 -138
+                2 -133 16 4 9 11 36 17 60 6 24 16 47 23 52 6 5 67 30 136 57 142 54 160 62
+                177 84 9 12 12 94 13 307 0 269 -1 292 -18 310 -11 11 -82 44 -158 73 -76 30
+                -143 58 -148 62 -5 4 -25 57 -46 117 -20 60 -60 155 -88 212 l-51 102 66 148
+                c51 117 64 155 59 177 -10 37 -391 419 -428 428 -20 5 -62 -9 -177 -59 l-150
+                -66 -88 44 c-94 48 -248 110 -300 121 -41 8 -43 11 -88 130 -64 169 -75 192
+                -101 204 -17 7 -118 11 -304 11 -275 0 -279 0 -304 -22z m574 -288 c44 -114
+                61 -147 81 -157 13 -6 78 -28 144 -49 66 -21 175 -66 243 -101 68 -35 130 -63
+                139 -63 9 0 79 28 156 61 l139 62 146 -146 146 -146 -62 -139 c-34 -77 -62
+                -147 -62 -155 0 -9 28 -71 63 -139 35 -68 80 -177 101 -243 56 -178 41 -162
+                206 -225 l145 -56 0 -209 0 -209 -145 -56 c-165 -64 -153 -51 -200 -210 -17
+                -58 -56 -155 -85 -215 l-54 -110 -66 -29 -67 -29 -71 32 c-117 51 -122 49
+                -255 -81 -112 -111 -145 -156 -135 -187 3 -9 19 -49 36 -89 l31 -72 -29 -61
+                c-29 -60 -31 -62 -122 -105 -51 -25 -143 -61 -205 -80 -170 -54 -154 -39 -218
+                -204 l-56 -145 -208 0 -209 0 -54 140 c-30 77 -59 145 -66 152 -7 7 -52 24
+                -101 38 -118 34 -243 86 -338 141 -42 24 -87 44 -99 44 -11 0 -84 -28 -161
+                -62 l-139 -62 -146 146 -146 146 61 139 c34 76 62 148 62 161 0 13 -18 54 -40
+                92 -54 93 -105 213 -141 335 -16 55 -35 105 -42 112 -7 7 -75 36 -152 65
+                l-140 54 0 209 0 209 140 54 c77 29 145 58 152 65 7 7 26 58 42 114 36 118 87
+                240 142 335 22 36 39 77 39 90 0 13 -28 85 -62 161 l-61 139 146 146 146 146
+                139 -62 c77 -34 150 -62 161 -62 12 0 52 17 89 38 109 61 180 92 297 129 61
+                19 121 40 135 46 23 12 62 96 129 280 l10 27 208 -2 207 -3 56 -145z m1595
+                -2507 c15 -38 34 -76 42 -85 8 -9 52 -29 97 -44 44 -14 109 -41 144 -60 34
+                -19 76 -34 91 -34 16 0 60 14 97 30 l68 31 63 -63 c35 -34 63 -67 63 -72 0 -5
+                -14 -45 -32 -88 l-32 -78 42 -84 c23 -46 51 -114 63 -152 12 -38 30 -78 40
+                -89 10 -10 49 -31 86 -46 l68 -27 3 -95 3 -95 -56 -21 c-106 -40 -111 -44
+                -135 -118 -12 -38 -42 -112 -68 -166 l-46 -97 34 -81 33 -81 -66 -66 -66 -66
+                -53 23 c-109 47 -106 47 -195 3 -44 -23 -117 -53 -162 -67 -89 -29 -91 -31
+                -132 -140 l-21 -56 -96 3 -96 3 -26 67 c-14 37 -34 76 -45 86 -11 11 -51 29
+                -89 41 -38 12 -106 40 -152 63 l-84 42 -77 -32 c-43 -18 -83 -32 -88 -32 -6 0
+                -39 28 -73 63 l-63 63 31 68 c16 37 30 80 30 95 0 15 -18 62 -39 104 -22 41
+                -49 107 -60 145 -12 38 -29 76 -39 85 -10 9 -47 27 -82 41 l-65 24 -3 96 -3
+                96 48 20 c115 47 115 47 148 145 17 50 45 118 63 152 18 34 32 74 32 88 0 14
+                -14 56 -30 92 l-31 67 68 68 68 67 65 -29 c83 -37 106 -37 183 2 34 17 103 45
+                152 62 98 34 98 34 145 149 l19 47 95 0 94 0 27 -67z"/>
+                <path d="M1976 4269 c-297 -34 -541 -152 -752 -363 -246 -246 -366 -536 -366
+                -881 0 -345 120 -635 366 -881 142 -141 284 -233 463 -298 588 -210 1245 52
+                1531 612 55 108 103 248 123 362 17 96 17 314 0 410 -29 166 -102 347 -199
+                495 -60 91 -197 233 -293 305 -247 184 -575 274 -873 239z m339 -174 c404 -77
+                740 -392 845 -794 99 -375 -9 -771 -285 -1046 -335 -336 -836 -416 -1260 -203
+                -299 150 -508 425 -580 763 -23 107 -23 313 0 420 90 424 396 744 812 850 142
+                36 314 40 468 10z"/>
+                <path d="M2019 3869 c-189 -17 -379 -109 -515 -251 -159 -164 -235 -354 -235
+                -583 0 -243 91 -453 268 -615 330 -303 842 -292 1158 25 303 303 328 786 58
+                1120 -133 164 -349 284 -541 300 -37 3 -78 7 -92 9 -14 1 -59 -1 -101 -5z
+                m246 -175 c33 -8 98 -33 145 -56 68 -33 102 -58 171 -127 147 -147 207 -303
+                196 -510 -9 -182 -66 -310 -197 -441 -131 -131 -259 -188 -441 -197 -207 -11
+                -364 49 -509 196 -156 157 -222 340 -198 554 17 154 83 293 193 402 167 167
+                407 235 640 179z"/>
+                <path d="M2376 3465 c-29 -10 -87 -61 -213 -187 l-173 -173 -52 52 c-60 57
+                -98 80 -155 89 -99 15 -208 -61 -232 -163 -11 -44 -10 -61 3 -108 14 -47 31
+                -70 114 -157 191 -199 267 -243 375 -218 50 12 64 25 316 274 171 169 270 275
+                282 301 80 171 -87 354 -265 290z m108 -161 c40 -39 26 -58 -211 -297 -126
+                -126 -240 -235 -255 -243 -40 -21 -63 -6 -201 134 -102 104 -118 124 -112 144
+                8 27 32 48 55 48 8 0 49 -34 90 -76 84 -85 120 -108 153 -98 12 3 112 96 223
+                205 204 203 224 217 258 183z"/>
+                <path d="M3690 1854 c-213 -57 -379 -224 -435 -439 -19 -75 -19 -224 0 -298
+                25 -95 75 -185 146 -261 115 -123 245 -184 409 -193 181 -10 332 48 460 177
+                191 191 234 473 108 713 -70 134 -234 262 -384 301 -77 20 -230 20 -304 0z
+                m288 -162 c262 -82 387 -386 261 -634 -30 -58 -119 -150 -177 -181 -200 -109
+                -444 -56 -578 125 -64 87 -87 168 -82 286 3 83 8 107 36 165 34 74 122 171
+                182 202 112 58 245 72 358 37z"/>
+                </g>
+              </svg>
+          </div>
+          <h3 class="team-card-name">Camila</h3>
+          <p class="team-card-role">Apoio Operacional</p>
+          <a href="mailto:apoio.operacional@prevenirsst.com.br" class="team-card-email">
+            E-mail: <span>apoio.operacional@prevenirsst.com.br</span>
+          </a>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-avatar">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512.000000 512.000000"
+                preserveAspectRatio="xMidYMid meet">
+
+                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                fill="#ffffff" stroke="none">
+                <path d="M245 4267 c-26 -14 -48 -37 -62 -67 -23 -44 -23 -50 -23 -436 0 -389
+                0 -391 23 -434 16 -30 37 -51 67 -67 43 -23 44 -23 457 -23 325 0 421 3 446
+                14 49 20 95 78 102 128 3 24 5 212 3 419 l-3 376 -25 36 c-13 20 -41 45 -61
+                56 -35 20 -51 21 -460 21 -420 0 -424 -1 -464 -23z m855 -502 l0 -365 -390 0
+                -390 0 0 365 0 365 390 0 390 0 0 -365z"/>
+                <path d="M885 4009 c-11 -6 -60 -71 -109 -145 -49 -74 -93 -137 -96 -139 -4
+                -3 -35 31 -70 74 -34 44 -68 82 -77 85 -32 13 -70 5 -91 -17 -41 -44 -31 -73
+                74 -208 114 -147 126 -159 168 -159 43 0 51 10 195 230 131 199 139 223 96
+                265 -25 26 -56 31 -90 14z"/>
+                <path d="M3285 3932 c-203 -60 -368 -229 -419 -428 -9 -34 -16 -102 -16 -151
+                0 -163 51 -292 160 -407 125 -131 260 -190 435 -190 67 0 120 6 160 18 167 50
+                302 160 374 307 92 186 92 361 2 544 -66 134 -192 245 -334 295 -87 31 -276
+                37 -362 12z m348 -179 c175 -83 280 -280 249 -465 -17 -99 -55 -173 -126 -244
+                -70 -69 -142 -107 -238 -125 -186 -34 -384 70 -468 246 -62 128 -52 305 24
+                423 52 81 137 149 230 183 40 15 74 18 156 16 94 -2 112 -6 173 -34z"/>
+                <path d="M250 3067 c-30 -16 -51 -37 -67 -67 -23 -43 -23 -45 -23 -434 0 -386
+                0 -392 23 -436 14 -30 36 -53 62 -67 40 -22 44 -23 464 -23 418 0 424 0 463
+                22 21 12 49 38 61 58 21 34 22 44 25 410 2 206 0 394 -3 418 -7 50 -53 108
+                -102 128 -25 11 -121 14 -446 14 -413 0 -414 0 -457 -23z m850 -502 l0 -365
+                -390 0 -390 0 0 365 0 365 390 0 390 0 0 -365z"/>
+                <path d="M873 2796 c-15 -14 -64 -81 -108 -150 -44 -69 -83 -125 -87 -126 -3
+                0 -30 30 -59 68 -28 37 -61 75 -72 85 -28 25 -73 22 -102 -8 -44 -43 -35 -70
+                70 -206 113 -147 127 -159 171 -159 43 0 45 2 194 229 136 209 146 242 79 276
+                -39 20 -53 19 -86 -9z"/>
+                <path d="M2780 2590 c-85 -20 -163 -40 -172 -45 -10 -4 -42 -58 -72 -121 l-55
+                -113 -370 -3 c-364 -3 -371 -3 -392 -25 -27 -26 -27 -49 1 -325 11 -112 20
+                -209 20 -215 0 -9 -17 -13 -53 -13 -58 0 -92 -21 -103 -64 -3 -12 -4 -105 -2
+                -205 3 -178 4 -183 27 -202 18 -15 39 -19 102 -19 68 0 79 -2 79 -17 0 -10 7
+                -81 15 -158 8 -77 15 -150 15 -163 0 -13 11 -34 25 -47 l24 -25 1474 0 c1397
+                0 1476 1 1497 18 17 14 32 61 71 216 27 110 49 207 49 217 0 23 -578 1229
+                -600 1253 -13 13 -72 31 -186 57 -182 42 -201 45 -225 26 -9 -7 -99 -136 -199
+                -287 -100 -151 -183 -277 -186 -279 -2 -2 -4 89 -4 202 l0 207 33 0 c82 1 112
+                100 43 145 -21 14 -49 16 -171 13 -140 -3 -148 -4 -166 -27 -43 -53 -5 -131
+                66 -131 l35 0 0 -205 c0 -113 -3 -205 -7 -204 -5 0 -84 117 -178 260 -93 143
+                -182 273 -197 290 -33 37 -44 37 -238 -11z m389 -500 c133 -201 251 -373 262
+                -382 26 -22 58 -23 86 -3 13 9 133 182 268 386 195 294 249 369 263 365 9 -3
+                57 -14 106 -25 48 -11 92 -23 96 -28 14 -16 540 -1122 540 -1137 0 -8 -14 -73
+                -31 -145 l-31 -131 -584 0 -584 0 0 114 c0 107 1 116 22 130 19 14 74 16 396
+                16 l373 0 24 25 c14 13 25 34 25 46 0 29 -186 438 -211 464 -45 46 -129 10
+                -129 -55 0 -15 29 -92 65 -170 36 -78 65 -144 65 -146 0 -1 -143 -4 -317 -6
+                l-318 -3 -48 -28 c-26 -15 -60 -47 -75 -69 -26 -39 -27 -49 -30 -180 l-4 -138
+                -201 0 -202 0 -87 636 c-98 725 -85 675 -188 682 -33 2 -60 6 -60 8 0 2 10 23
+                22 48 l21 44 101 25 c56 14 106 24 113 23 6 0 120 -165 252 -366z m-494 48 c5
+                -14 155 -1113 155 -1134 0 -12 -74 -14 -429 -14 l-428 0 -7 78 c-4 42 -9 98
+                -13 125 l-6 47 107 0 c100 0 108 2 131 25 25 24 25 25 25 220 0 195 0 196 -25
+                220 -23 24 -29 25 -155 25 -128 0 -130 0 -130 23 -1 12 -9 103 -19 202 -10 99
+                -16 183 -14 188 2 4 184 7 404 7 311 0 401 -3 404 -12z m-625 -653 l0 -85
+                -155 0 -155 0 0 85 0 85 155 0 155 0 0 -85z"/>
+                <path d="M265 1876 c-37 -17 -80 -62 -94 -99 -7 -18 -11 -166 -11 -415 0 -433
+                2 -444 71 -493 l34 -24 445 0 445 0 32 23 c17 12 41 42 52 65 20 42 21 58 21
+                428 0 433 -1 438 -76 495 l-37 29 -426 2 c-342 2 -432 0 -456 -11z m833 -513
+                l2 -363 -390 0 -390 0 0 365 0 365 388 -2 387 -3 3 -362z"/>
+                <path d="M890 1607 c-14 -7 -65 -72 -119 -154 l-93 -143 -61 78 c-34 42 -68
+                82 -76 89 -44 35 -121 -7 -121 -66 0 -37 197 -297 238 -312 53 -20 73 1 212
+                213 71 111 130 211 130 224 0 27 -36 70 -65 78 -11 3 -31 0 -45 -7z"/>
+                </g>
+              </svg>
+          </div>
+          <h3 class="team-card-name">Alcides</h3>
+          <p class="team-card-role">Administrativo / Financeiro</p>
+          <a href="mailto:adm@prevenirsst.com.br" class="team-card-email">
+            E-mail: <span>adm@prevenirsst.com.br</span>
+          </a>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-avatar">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                class="size-14" viewBox="0 0 512.000000 512.000000"
+                preserveAspectRatio="xMidYMid meet">
+
+                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                fill="#ffffff" stroke="none">
+                <path d="M1960 4654 c-91 -7 -180 -13 -198 -13 -73 -2 -108 -86 -56 -138 25
+                -25 27 -25 132 -19 59 4 127 9 152 13 l45 5 -332 -334 c-311 -312 -333 -337
+                -333 -369 0 -46 34 -79 80 -79 32 0 61 26 368 333 l333 332 -8 -110 c-13 -180
+                -11 -204 16 -226 32 -26 82 -25 109 4 20 21 23 43 38 243 8 120 13 232 10 247
+                -9 44 -45 88 -90 108 -46 21 -42 21 -266 3z"/>
+                <path d="M3775 4661 c-73 -19 -142 -77 -169 -143 -9 -21 -16 -67 -16 -105 l0
+                -68 -197 0 c-184 0 -201 -2 -238 -22 -92 -49 -135 -123 -135 -230 l0 -68 -197
+                0 c-184 0 -201 -2 -238 -22 -92 -49 -135 -123 -135 -230 l0 -68 -197 0 c-221
+                0 -241 -5 -310 -77 -63 -65 -63 -68 -63 -493 l0 -385 -116 0 c-115 0 -116 0
+                -146 -30 -25 -26 -29 -36 -24 -63 3 -18 16 -40 27 -49 20 -17 105 -18 1478
+                -18 l1458 0 21 23 c12 13 22 35 22 49 0 71 -34 88 -175 88 l-105 0 0 863 c0
+                846 -1 863 -21 907 -25 56 -62 95 -114 123 -36 19 -58 22 -210 24 -93 1 -183
+                -2 -200 -6z m356 -180 l29 -29 0 -851 0 -851 -205 0 -205 0 0 853 c0 668 3
+                857 13 869 25 32 53 37 195 38 l144 0 29 -29z m-569 -319 l23 -23 3 -694 2
+                -695 -205 0 -205 0 0 693 c0 540 3 697 13 709 27 34 51 38 199 36 138 -3 149
+                -4 170 -26z m-571 -321 l29 -29 0 -531 0 -531 -205 0 -205 0 0 533 c0 412 3
+                537 13 549 25 32 53 37 195 38 l144 0 29 -29z m-569 -319 c23 -23 23 -23 26
+                -397 l3 -375 -206 0 -205 0 0 371 c0 243 4 377 11 390 17 33 47 39 201 36 139
+                -2 149 -3 170 -25z"/>
+                <path d="M1785 2300 c-38 -10 -210 -66 -381 -123 l-312 -105 -10 23 c-18 39
+                -73 95 -116 118 -38 21 -54 22 -251 22 -196 0 -213 -1 -250 -22 -47 -25 -95
+                -74 -121 -123 -18 -33 -19 -73 -22 -689 -3 -727 -4 -710 63 -789 19 -22 56
+                -51 83 -64 44 -22 58 -23 247 -23 198 0 201 0 251 27 56 30 93 68 114 118 l14
+                33 140 -6 c218 -9 374 -49 597 -152 140 -65 207 -85 314 -92 97 -6 929 69
+                1020 92 78 20 188 73 248 118 96 74 1316 1147 1336 1176 77 107 64 240 -32
+                336 -144 143 -386 177 -578 80 -28 -15 -256 -177 -506 -361 -450 -331 -472
+                -345 -473 -296 0 7 -9 31 -21 53 -45 90 -89 122 -483 358 -210 126 -400 238
+                -424 250 -118 60 -311 78 -447 41z m308 -160 c45 -14 188 -94 466 -260 362
+                -217 403 -245 425 -283 40 -68 43 -117 12 -182 -36 -72 -88 -105 -168 -105
+                -60 0 -28 -17 -579 303 -145 85 -246 137 -263 137 -64 0 -101 -90 -53 -131 12
+                -11 190 -117 395 -234 399 -229 433 -244 538 -231 93 11 204 74 241 136 25 45
+                1058 804 1134 834 99 40 223 30 317 -27 82 -49 102 -105 60 -166 -29 -40
+                -1266 -1113 -1335 -1158 -106 -68 -166 -79 -653 -124 -539 -49 -536 -49 -740
+                46 -226 104 -415 153 -637 162 l-143 6 0 523 0 523 378 125 c358 120 381 126
+                458 126 54 0 104 -7 147 -20z m-1198 -72 c56 -25 55 -14 55 -685 0 -474 -3
+                -624 -13 -643 -24 -48 -68 -60 -220 -60 -149 0 -192 10 -221 51 -14 21 -16 86
+                -16 649 1 670 0 658 51 686 32 18 326 19 364 2z"/>
+                </g>
+              </svg>
+          </div>
+          <h3 class="team-card-name">Gabriela</h3>
+          <p class="team-card-role">Comercial</p>
+          <a href="mailto:comercial@prevenirsst.com.br" class="team-card-email">
+            E-mail: <span>comercial@prevenirsst.com.br</span>
+          </a>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-avatar">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512.000000 512.000000"
+              preserveAspectRatio="xMidYMid meet">
+
+              <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+              fill="#ffffff" stroke="none">
+              <path d="M1945 5105 c-32 -17 -75 -63 -75 -81 0 -6 -42 -26 -92 -44 -416 -144
+              -724 -504 -804 -941 -15 -81 -18 -88 -46 -100 -45 -18 -120 -97 -148 -154 -21
+              -42 -25 -65 -25 -140 0 -79 4 -97 27 -141 31 -58 74 -105 130 -140 l38 -24 0
+              -119 c0 -186 30 -311 118 -486 56 -113 144 -243 224 -329 33 -37 59 -69 56
+              -71 -2 -2 -44 -19 -94 -38 -456 -175 -793 -488 -1019 -951 -105 -214 -184
+              -457 -216 -666 -31 -201 35 -343 186 -399 84 -31 213 -40 575 -40 354 0 374 3
+              404 60 21 40 18 72 -13 110 l-19 24 -414 6 c-427 6 -468 10 -503 49 -45 50
+              -22 228 66 494 153 466 413 802 784 1015 49 28 92 51 96 51 3 0 9 -37 12 -83
+              15 -183 77 -340 203 -507 87 -115 105 -130 157 -130 43 0 32 -9 492 442 l130
+              128 260 -252 c326 -317 327 -318 369 -318 44 0 73 25 148 122 126 166 193 331
+              205 506 3 50 9 92 12 92 16 -1 165 -88 235 -138 99 -71 220 -182 209 -193 -12
+              -11 -111 -38 -183 -50 -122 -19 -136 -46 -126 -247 8 -165 35 -328 76 -452 38
+              -118 140 -328 214 -439 31 -47 56 -86 56 -88 0 -2 -381 -3 -846 -3 l-846 0
+              -29 -29 c-40 -40 -40 -89 0 -133 l29 -33 928 -3 928 -2 66 -64 c128 -124 252
+              -184 354 -172 161 18 362 199 571 511 205 305 304 626 305 985 0 104 -19 143
+              -77 159 -21 6 -47 11 -58 11 -77 0 -314 98 -436 180 -75 50 -199 153 -248 204
+              -39 40 -87 54 -122 35 -13 -7 -60 -45 -103 -86 -44 -40 -119 -100 -166 -133
+              l-87 -59 -69 70 c-179 182 -419 335 -656 420 l-87 32 65 76 c233 270 344 547
+              344 856 l0 80 45 29 c100 62 150 168 143 295 -7 116 -66 210 -163 262 -28 15
+              -45 31 -45 42 0 10 -7 53 -16 95 -59 292 -229 559 -470 740 -79 59 -254 151
+              -337 178 -32 10 -57 23 -57 30 0 21 -53 76 -87 90 -49 21 -437 20 -478 -1z
+              m378 -412 c9 -301 32 -464 103 -700 l6 -23 -241 0 c-151 0 -241 4 -241 10 0 5
+              11 47 24 93 50 172 85 487 86 765 l0 82 128 0 129 0 6 -227z m-467 -45 c-12
+              -258 -44 -446 -104 -618 l-19 -55 -281 -3 -282 -2 0 28 c0 48 40 173 85 268
+              77 160 203 307 349 406 54 38 230 127 250 128 5 0 6 -66 2 -152z m741 112
+              c219 -99 414 -295 514 -516 26 -58 79 -235 79 -265 0 -5 -118 -8 -272 -7
+              l-273 3 -32 95 c-40 120 -69 263 -82 410 -11 121 -15 310 -6 310 3 0 35 -14
+              72 -30z m746 -1003 c58 -38 76 -111 43 -175 -34 -66 41 -62 -1217 -62 l-1141
+              0 -39 39 c-33 32 -39 45 -39 80 0 71 30 110 99 132 14 4 530 7 1146 6 1052 -2
+              1123 -3 1148 -20z m-136 -559 c-7 -145 -29 -235 -92 -363 -186 -385 -606 -695
+              -941 -695 -203 0 -444 116 -652 314 -122 117 -210 235 -277 371 -73 146 -95
+              237 -95 382 l0 113 1031 0 1032 0 -6 -122z m-1597 -1068 c75 -50 179 -102 274
+              -136 l79 -28 -199 -192 c-109 -106 -202 -193 -207 -194 -17 -1 -103 150 -131
+              230 -27 75 -30 98 -31 202 0 64 3 119 6 123 11 11 134 43 144 37 6 -3 35 -22
+              65 -42z m1338 5 c4 -3 9 -47 10 -96 5 -109 -16 -209 -62 -305 -38 -77 -93
+              -157 -105 -152 -5 2 -97 89 -205 195 l-195 192 67 22 c77 25 234 103 307 152
+              l50 34 63 -17 c35 -10 66 -21 70 -25z m1517 -473 c111 -69 254 -133 364 -163
+              l84 -23 -7 -100 c-13 -197 -66 -385 -159 -571 -142 -285 -429 -605 -541 -605
+              -119 0 -416 339 -558 637 -89 188 -128 337 -144 544 l-6 95 82 23 c195 53 406
+              171 590 328 l34 30 86 -69 c47 -38 126 -95 175 -126z"/>
+              <path d="M4453 1280 c-11 -5 -83 -76 -159 -159 -76 -83 -141 -151 -145 -151
+              -3 0 -26 15 -50 33 -66 51 -87 60 -125 53 -44 -9 -74 -48 -74 -97 0 -47 21
+              -72 143 -163 98 -73 125 -80 176 -44 55 40 359 386 366 417 9 41 -18 89 -60
+              107 -39 16 -42 16 -72 4z"/>
+              <path d="M1479 411 c-39 -40 -40 -89 -1 -132 48 -54 130 -39 158 28 42 99 -80
+              180 -157 104z"/>
+              </g>
+            </svg>
+          </div>
+          <h3 class="team-card-name">Alceu</h3>
+          <p class="team-card-role">Equipe Técnica - Segurança do Trabalho</p>
+          <a href="mailto:seguranca@prevevirsst.com.br" class="team-card-email">
+            E-mail: <span>seguranca@prevevirsst.com.br</span>
+          </a>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-avatar">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512.000000 512.000000"
+                preserveAspectRatio="xMidYMid meet">
+
+                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                fill="#ffffff" stroke="none">
+                <path d="M3218 5031 c-15 -12 -38 -57 -62 -120 l-38 -100 -77 -26 c-42 -14
+                -106 -40 -144 -59 l-68 -34 -97 44 c-53 24 -107 44 -120 44 -12 0 -40 13 -63
+                29 -67 49 -131 66 -244 65 -78 0 -112 -5 -155 -22 -69 -27 -126 -73 -141 -115
+                -9 -26 -27 -41 -94 -76 -253 -133 -428 -391 -452 -669 -5 -67 -8 -74 -33 -87
+                -15 -8 -39 -28 -53 -44 -91 -109 -34 -271 106 -300 25 -5 32 -16 60 -91 18
+                -47 50 -114 71 -149 50 -82 154 -192 230 -244 l59 -40 -104 -37 c-178 -63
+                -343 -157 -479 -274 -36 -31 -72 -54 -80 -52 -8 2 -42 14 -75 27 l-60 22 -429
+                -184 c-407 -174 -430 -185 -442 -216 -17 -39 -19 -618 -4 -803 27 -325 198
+                -622 461 -801 119 -80 339 -169 420 -169 42 0 193 47 272 85 107 51 193 111
+                284 198 96 93 168 193 228 320 57 120 83 215 97 359 l12 118 233 0 233 0 0
+                -697 c0 -654 2 -701 19 -738 22 -50 79 -101 128 -115 27 -8 344 -10 1070 -8
+                l1031 3 44 30 c23 17 54 51 68 75 l25 45 3 1213 c1 819 -1 1226 -8 1252 -22
+                83 -95 141 -187 149 l-65 6 -29 70 -30 70 40 85 c22 47 48 111 58 143 l17 57
+                96 36 c52 20 106 47 120 61 l25 23 0 215 c0 254 9 235 -139 292 l-98 38 -33
+                90 c-17 50 -44 114 -59 144 l-28 54 43 96 c23 53 42 109 42 125 0 23 -27 55
+                -154 182 -116 115 -161 154 -180 154 -13 0 -68 -20 -122 -45 l-99 -44 -66 33
+                c-37 19 -102 46 -144 61 l-77 27 -37 97 c-55 146 -44 141 -293 141 -190 0
+                -210 -2 -233 -19z m397 -235 c20 -52 44 -101 53 -109 10 -9 55 -28 102 -42 47
+                -15 129 -49 183 -76 54 -27 104 -49 111 -49 7 0 54 18 104 40 49 22 94 40 99
+                40 4 0 48 -40 96 -88 l88 -89 -40 -92 c-23 -50 -41 -102 -41 -114 0 -12 24
+                -69 53 -127 29 -58 61 -136 71 -175 10 -38 27 -80 38 -91 10 -12 59 -36 108
+                -55 l90 -33 0 -132 0 -132 -94 -36 c-52 -20 -99 -43 -105 -50 -6 -7 -24 -53
+                -40 -103 -16 -50 -50 -132 -75 -182 -25 -50 -46 -100 -46 -111 0 -11 11 -47
+                25 -80 14 -33 25 -62 25 -65 0 -3 -40 -5 -90 -5 l-90 0 0 44 c0 55 -17 104
+                -40 116 -10 6 -75 10 -144 10 -106 0 -126 2 -134 17 -8 13 1 27 41 67 72 72
+                139 180 172 277 22 67 29 108 33 201 6 147 -13 235 -75 361 -38 74 -62 107
+                -132 177 -95 94 -164 139 -268 175 -179 63 -369 55 -540 -21 -31 -13 -57 -23
+                -58 -22 -1 2 -18 35 -39 73 -20 39 -65 105 -101 147 l-65 77 43 25 c45 27 177
+                78 243 95 52 14 68 32 98 111 13 36 29 77 35 93 l11 27 129 0 129 0 37 -94z
+                m-1186 -100 c16 -9 32 -20 35 -25 3 -5 -7 -107 -23 -227 -31 -229 -30 -250 11
+                -278 31 -22 62 -20 93 7 23 20 27 35 47 189 l22 167 50 -27 c28 -15 87 -63
+                132 -107 66 -66 89 -97 128 -175 43 -89 75 -199 76 -262 l0 -28 -105 0 -105 0
+                0 189 c0 185 -1 191 -23 217 -33 37 -81 37 -114 0 -22 -26 -23 -32 -23 -217
+                l0 -189 -320 0 -320 0 0 188 c0 156 -3 191 -16 210 -22 32 -58 44 -91 31 -50
+                -19 -52 -30 -53 -236 l0 -193 -106 0 -107 0 7 61 c15 150 102 318 221 427 61
+                56 149 112 158 102 3 -3 14 -77 25 -165 20 -147 23 -162 47 -182 14 -13 36
+                -23 48 -23 29 0 66 26 76 54 5 12 -3 104 -20 231 -15 116 -28 216 -29 222 0
+                16 42 43 83 54 46 12 160 3 196 -15z m1202 -560 c229 -80 379 -290 379 -531 0
+                -153 -54 -287 -156 -392 l-61 -62 -49 15 c-100 31 -219 -2 -299 -85 -38 -40
+                -42 -41 -85 -35 -117 17 -247 88 -329 181 l-49 55 35 65 c20 36 48 97 62 136
+                24 64 30 72 58 78 41 8 97 43 117 73 27 43 39 108 27 154 -11 40 -52 91 -98
+                122 -17 13 -22 29 -28 96 l-6 81 58 26 c53 23 104 39 173 51 56 10 182 -4 251
+                -28z m-511 -381 c6 -8 9 -19 5 -25 -4 -7 -264 -10 -815 -10 -551 0 -811 3
+                -815 10 -4 6 -1 17 5 25 19 22 1601 22 1620 0z m-190 -205 c0 -21 -35 -98 -72
+                -157 -113 -180 -334 -303 -548 -303 -190 0 -383 93 -508 243 -44 53 -112 181
+                -112 211 0 15 51 16 620 16 398 0 620 -4 620 -10z m115 -548 c47 -31 49 -34
+                46 -75 -1 -23 -4 -43 -5 -44 -1 -1 -38 16 -82 39 -43 23 -126 58 -183 78
+                l-103 37 64 45 c35 26 70 53 77 61 11 14 21 7 74 -47 34 -34 84 -76 112 -94z
+                m694 -9 c14 -11 36 -39 48 -64 38 -74 49 -79 179 -79 l114 0 0 -85 0 -85 -415
+                0 -415 0 0 85 0 85 104 0 c135 0 150 6 180 74 18 41 34 60 63 75 45 25 103 22
+                142 -6z m-1176 -88 c43 -9 109 -26 145 -38 l67 -21 -86 -6 c-100 -6 -150 -32
+                -190 -97 l-24 -38 -5 -455 -5 -455 -232 -3 -233 -2 0 257 c0 187 -4 265 -13
+                283 -10 20 -68 49 -290 144 -152 66 -277 122 -277 125 1 11 128 102 205 146
+                158 90 346 154 515 175 103 12 329 5 423 -15z m527 -280 c0 -46 4 -60 25 -80
+                l24 -25 523 0 c413 1 527 3 540 14 23 17 38 59 38 107 l0 39 220 0 c207 0 220
+                -1 230 -19 7 -13 10 -406 10 -1203 0 -1055 -2 -1186 -16 -1206 l-15 -22 -1004
+                0 c-899 0 -1005 2 -1019 16 -14 14 -16 138 -16 1213 0 918 3 1200 12 1209 9 9
+                74 12 230 12 l218 0 0 -55z m-1605 -235 l350 -150 3 -317 c2 -189 -2 -359 -8
+                -418 -40 -359 -279 -654 -620 -765 l-98 -33 -73 23 c-158 47 -292 132 -410
+                258 -82 88 -124 153 -174 269 -61 140 -66 192 -63 612 l3 375 355 152 c195 84
+                362 151 370 148 8 -2 173 -71 365 -154z"/>
+                <path d="M3632 2964 c-42 -29 -17 -104 35 -104 20 0 53 38 53 60 0 22 -33 60
+                -53 60 -7 0 -23 -7 -35 -16z"/>
+                <path d="M3010 2278 c-71 -49 -75 -61 -75 -243 0 -150 2 -166 21 -191 47 -64
+                62 -69 229 -72 138 -3 157 -1 193 17 73 37 82 65 82 248 0 150 -1 162 -23 194
+                -40 60 -72 69 -243 69 -140 0 -153 -2 -184 -22z m290 -243 l0 -105 -105 0
+                -105 0 0 105 0 105 105 0 105 0 0 -105z"/>
+                <path d="M3664 2210 c-28 -11 -54 -48 -54 -76 0 -12 9 -33 21 -48 l20 -26 299
+                0 c269 0 300 2 319 18 34 28 37 73 8 108 l-25 29 -284 2 c-155 1 -293 -2 -304
+                -7z"/>
+                <path d="M3664 2010 c-28 -11 -54 -48 -54 -76 0 -12 9 -33 21 -48 l20 -26 170
+                0 c156 0 171 2 189 20 21 21 26 69 10 100 -5 10 -24 23 -41 29 -37 13 -284 14
+                -315 1z"/>
+                <path d="M3003 1649 c-58 -37 -73 -87 -73 -240 0 -120 2 -140 23 -179 16 -33
+                34 -51 67 -68 42 -22 55 -23 192 -20 162 3 179 9 226 78 20 31 22 44 22 189 0
+                175 -8 202 -72 241 -29 18 -51 20 -193 20 -144 0 -163 -2 -192 -21z m297 -244
+                l0 -106 -102 3 -103 3 -3 103 -3 102 106 0 105 0 0 -105z"/>
+                <path d="M3635 1625 c-33 -33 -32 -70 4 -106 l29 -29 287 0 287 0 30 30 c25
+                26 29 36 24 63 -13 66 -15 67 -343 67 l-294 0 -24 -25z"/>
+                <path d="M3635 1425 c-33 -33 -32 -70 4 -106 l29 -29 155 0 c141 0 157 2 181
+                21 35 27 36 86 3 117 -22 21 -33 22 -186 22 -159 0 -162 -1 -186 -25z"/>
+                <path d="M3020 1028 c-33 -17 -51 -35 -67 -68 -21 -39 -23 -59 -23 -179 0
+                -115 3 -141 20 -175 37 -75 53 -81 240 -84 151 -2 168 -1 198 18 66 41 73 65
+                70 250 -3 187 -9 203 -84 240 -34 17 -60 20 -175 20 -120 0 -140 -2 -179 -22z
+                m280 -243 l0 -105 -105 0 -105 0 0 105 0 105 105 0 105 0 0 -105z"/>
+                <path d="M3635 935 c-33 -33 -32 -70 4 -106 l29 -29 287 0 287 0 30 30 c25 26
+                29 36 24 63 -13 66 -15 67 -343 67 l-294 0 -24 -25z"/>
+                <path d="M3635 735 c-27 -26 -31 -51 -14 -88 18 -40 49 -47 208 -47 135 0 151
+                2 175 21 35 27 36 86 3 117 -22 21 -33 22 -186 22 -159 0 -162 -1 -186 -25z"/>
+                <path d="M1465 2101 c-57 -14 -81 -34 -282 -234 l-202 -201 -79 77 c-44 42
+                -91 81 -106 87 -35 13 -117 13 -153 -1 -66 -25 -123 -110 -123 -184 0 -71 30
+                -113 201 -281 151 -148 168 -162 215 -173 63 -15 113 -4 170 37 69 50 563 567
+                579 605 36 88 4 191 -76 239 -49 29 -99 39 -144 29z m73 -189 c3 -19 -47 -74
+                -260 -288 -145 -146 -271 -270 -281 -276 -16 -8 -41 12 -169 140 -127 125
+                -149 152 -144 170 14 42 46 25 157 -83 92 -90 112 -105 140 -105 30 0 57 24
+                269 235 195 195 239 235 260 233 17 -2 26 -10 28 -26z"/>
+                </g>
+              </svg>
+          </div>
+          <h3 class="team-card-name">Alex</h3>
+          <p class="team-card-role">Equipe Técnica - Segurança do Trabalho</p>
+          <a href="mailto:saudealx@gmail.com" class="team-card-email">
+            E-mail: <span>saudealx@gmail.com</span>
+          </a>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-avatar">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="size-14" viewBox="0 0 512.000000 512.000000"
+                preserveAspectRatio="xMidYMid meet">
+
+                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none">
+                  <path d="M1862 5100 c-210 -55 -378 -226 -427 -432 -12 -50 -15 -147 -15 -468
+                  l0 -406 -45 -44 c-61 -60 -79 -120 -73 -244 3 -78 8 -99 31 -139 37 -63 88
+                  -95 172 -109 37 -6 68 -16 70 -22 51 -207 119 -351 237 -504 46 -59 53 -82 25
+                  -82 -22 0 -130 -60 -185 -102 -67 -52 -156 -164 -194 -244 -15 -33 -36 -98
+                  -46 -143 -10 -47 -24 -86 -32 -91 -8 -4 -145 -47 -305 -95 -159 -47 -313 -97
+                  -340 -109 -93 -42 -169 -126 -199 -222 -19 -58 -106 -560 -106 -609 0 -24 7
+                  -39 26 -54 34 -27 57 -26 89 2 24 20 30 42 76 307 27 157 53 298 59 314 16 47
+                  58 95 103 118 35 18 577 188 600 188 4 0 7 -34 7 -75 0 -65 -2 -75 -17 -75
+                  -42 0 -140 -58 -190 -113 -85 -94 -90 -113 -125 -560 -34 -437 -34 -443 31
+                  -508 42 -42 91 -59 173 -59 68 0 102 13 117 47 16 36 14 51 -14 78 -20 21 -34
+                  25 -88 25 -109 0 -103 -32 -69 406 33 419 35 429 106 491 46 41 95 56 171 51
+                  89 -6 151 -44 187 -118 26 -53 29 -72 56 -423 24 -313 26 -371 14 -388 -11
+                  -16 -25 -19 -81 -19 -58 0 -71 -3 -89 -23 -28 -30 -29 -78 -1 -103 17 -16 37
+                  -19 108 -19 75 0 92 3 131 27 65 37 90 87 90 176 0 95 -48 696 -60 755 -26
+                  127 -126 234 -253 272 l-42 12 -3 96 -3 96 88 26 c48 15 107 33 131 40 l42 13
+                  16 -36 c119 -279 349 -864 565 -1437 111 -294 133 -335 179 -335 46 0 68 41
+                  179 335 216 573 446 1158 565 1437 l16 36 42 -13 c24 -7 82 -25 131 -40 l87
+                  -26 -2 -221 -3 -220 -55 -20 c-269 -99 -340 -445 -132 -640 120 -112 280 -138
+                  426 -70 244 114 300 429 109 620 -50 50 -138 102 -175 102 -17 0 -18 16 -18
+                  200 0 110 3 200 8 200 22 0 564 -170 599 -188 44 -23 84 -68 102 -115 11 -28
+                  241 -1357 241 -1390 0 -10 -11 -29 -25 -42 l-24 -25 -2071 0 -2071 0 -24 25
+                  c-14 13 -25 32 -25 42 0 10 16 110 36 223 42 243 44 278 13 302 -35 29 -78 24
+                  -107 -13 -12 -16 -92 -456 -92 -507 0 -84 76 -186 156 -210 60 -18 4168 -18
+                  4228 0 79 24 156 126 156 209 0 43 -230 1373 -246 1423 -30 96 -106 180 -199
+                  222 -27 12 -180 62 -340 110 -159 47 -297 90 -306 95 -10 5 -20 32 -27 72 -19
+                  117 -78 233 -173 340 -46 52 -159 132 -224 156 -24 9 -47 19 -50 23 -3 3 23
+                  43 57 89 97 128 171 280 208 424 l18 70 68 12 c84 16 134 48 171 110 23 40 28
+                  61 31 139 6 124 -12 184 -73 244 l-45 44 0 148 c0 135 -2 150 -20 168 -27 27
+                  -81 26 -106 -1 -17 -19 -19 -41 -22 -188 l-3 -168 -52 -17 c-29 -10 -57 -20
+                  -64 -22 -9 -4 -13 76 -15 333 -3 298 -5 343 -21 377 -28 62 -80 119 -138 151
+                  -53 29 -57 30 -225 33 -194 4 -230 -2 -301 -53 -136 -99 -210 -99 -346 0 -71
+                  51 -107 57 -301 53 -168 -3 -172 -4 -225 -33 -58 -32 -110 -89 -138 -151 -16
+                  -34 -18 -79 -21 -377 -2 -257 -6 -337 -15 -333 -7 2 -36 13 -64 22 l-53 18 0
+                  422 c0 383 2 428 18 482 49 154 181 271 342 302 71 13 1189 13 1260 0 116 -22
+                  222 -91 285 -186 55 -83 67 -125 74 -268 6 -118 8 -130 30 -147 30 -25 76 -24
+                  101 1 18 18 20 33 20 133 0 201 -50 331 -174 452 -82 81 -164 128 -272 155
+                  -73 19 -111 20 -698 19 -578 0 -626 -1 -694 -19z m473 -690 c169 -107 281
+                  -107 450 0 l79 50 146 0 c172 0 201 -10 238 -80 22 -44 22 -50 22 -421 0 -364
+                  1 -377 20 -402 20 -26 85 -52 102 -41 4 3 8 -54 8 -127 0 -124 -2 -138 -35
+                  -238 -57 -169 -152 -319 -281 -442 -310 -293 -738 -293 -1048 0 -129 123 -224
+                  273 -281 442 -33 100 -35 114 -35 239 0 115 2 131 16 126 22 -8 78 18 98 45
+                  14 21 16 68 16 399 0 370 0 376 23 420 36 70 65 80 237 80 l146 0 79 -50z
+                  m-777 -810 c19 0 17 -189 -3 -196 -25 -10 -81 15 -94 42 -11 25 -16 156 -6
+                  166 3 3 25 2 48 -3 23 -4 48 -8 55 -9z m2112 -60 c0 -86 -13 -116 -57 -131
+                  -58 -19 -63 -11 -63 95 l0 94 53 9 c28 5 55 8 60 6 4 -2 7 -35 7 -73z m-1682
+                  -1144 c-3 -130 -5 -147 -25 -173 -11 -15 -27 -26 -35 -24 -51 15 -111 2 -360
+                  -75 -15 -4 -15 -1 -2 41 36 122 132 244 240 305 48 28 150 68 177 69 5 1 7
+                  -64 5 -143z m1203 128 c180 -53 308 -181 364 -362 12 -39 12 -42 -3 -38 -222
+                  69 -263 79 -322 80 -64 1 -65 2 -82 36 -14 28 -18 61 -18 168 0 72 1 132 3
+                  132 2 0 28 -7 58 -16z m-962 -120 c227 -94 479 -83 737 32 8 4 13 -27 16 -103
+                  3 -99 6 -113 36 -167 17 -33 31 -60 29 -61 -1 -1 -109 -81 -240 -178 -131 -97
+                  -242 -177 -247 -177 -5 0 -116 80 -247 177 -131 97 -239 177 -240 178 -2 1 12
+                  28 29 61 30 54 33 68 36 167 3 76 8 107 16 103 6 -3 40 -17 75 -32z m169 -727
+                  c10 -8 -17 -24 -110 -63 -68 -28 -126 -49 -129 -45 -3 3 -36 82 -73 175 -38
+                  93 -75 184 -82 202 -13 31 5 20 183 -112 109 -81 204 -151 211 -157z m718 269
+                  c-8 -18 -44 -109 -82 -202 -37 -93 -70 -172 -73 -175 -3 -4 -62 17 -130 45
+                  l-123 53 208 156 c115 85 210 156 212 156 1 1 -4 -14 -12 -33z m-475 -412 c46
+                  -20 86 -38 88 -40 2 -2 -14 -23 -35 -48 l-39 -45 -95 0 -95 0 -40 46 c-22 26
+                  -35 48 -30 50 11 4 160 71 161 72 0 1 38 -15 85 -35z m-338 -172 l54 -64 -14
+                  -71 c-7 -40 -15 -76 -16 -81 -2 -5 -27 52 -56 127 -68 178 -61 199 32 89z
+                  m592 58 c4 -6 -17 -72 -46 -147 -29 -75 -54 -132 -56 -127 -1 5 -9 41 -16 80
+                  l-14 72 56 66 c56 67 65 74 76 56z m886 -86 c122 -82 143 -256 42 -359 -92
+                  -95 -229 -100 -327 -13 -126 110 -95 317 59 390 62 29 168 21 226 -18z m-1152
+                  -136 c6 -29 22 -116 36 -193 l25 -140 -62 -167 c-35 -93 -65 -168 -68 -168 -3
+                  0 -33 75 -68 168 l-62 167 25 140 c14 77 30 164 36 193 l10 52 59 0 59 0 10
+                  -52z" />
+                </g>
+              </svg>
+          </div>
+          <h3 class="team-card-name">Dr. Fabio Satake Gonçalves</h3>
+          <p class="team-card-role">Médico do Trabalho / Coordenador</p>
+          <a href="mailto:saudealx@gmail.com" class="team-card-email">
+            E-mail: <span>fabiosatake@prevenirsst.com.br</span>
+          </a>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-avatar">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512.000000 512.000000"
+              preserveAspectRatio="xMidYMid meet">
+
+              <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+              fill="#ffffff" stroke="none">
+              <path d="M2428 4960 c-331 -56 -593 -297 -679 -625 -28 -111 -28 -289 0 -400
+              161 -617 908 -842 1374 -415 177 162 268 373 268 615 0 142 -21 238 -80 360
+              -159 331 -527 525 -883 465z m356 -148 c120 -41 188 -84 281 -177 156 -155
+              229 -363 204 -582 -18 -162 -88 -303 -208 -424 -85 -85 -172 -138 -289 -177
+              -67 -23 -94 -26 -212 -26 -118 0 -145 3 -212 26 -106 35 -197 89 -273 160
+              -297 278 -306 739 -20 1023 158 157 314 218 537 210 85 -3 124 -9 192 -33z"/>
+              <path d="M2370 4580 c-18 -18 -20 -33 -20 -130 l0 -109 -117 -3 c-150 -4 -144
+              5 -141 -215 4 -205 -2 -197 148 -201 l110 -4 0 -104 c0 -148 -6 -144 210 -144
+              216 0 210 -4 210 144 l0 104 110 4 c150 4 144 -4 148 201 3 220 9 211 -141
+              215 l-117 3 0 109 c0 155 7 150 -210 150 -157 0 -172 -2 -190 -20z m280 -207
+              c0 -60 4 -113 8 -119 17 -25 56 -34 152 -34 l101 0 -3 -87 -3 -88 -110 -3
+              c-146 -4 -145 -3 -145 -144 l0 -108 -90 0 -90 0 0 108 c0 141 1 140 -145 144
+              l-110 3 -3 88 -3 87 101 0 c96 0 135 9 152 34 4 6 8 59 8 119 l0 107 90 0 90
+              0 0 -107z"/>
+              <path d="M890 3414 c-135 -53 -253 -103 -262 -111 -29 -26 -21 -53 42 -157 33
+              -54 60 -101 60 -103 0 -2 -20 -32 -44 -66 -104 -147 -140 -264 -139 -447 0
+              -91 5 -140 18 -180 14 -43 19 -104 24 -270 6 -217 8 -227 44 -267 l20 -22 -24
+              -10 c-112 -43 -278 -126 -305 -152 -50 -48 -67 -101 -124 -391 -52 -260 -53
+              -268 -35 -288 18 -20 29 -20 598 -20 l579 0 -7 -27 c-19 -77 -135 -671 -135
+              -694 0 -14 8 -33 18 -42 17 -16 121 -17 1288 -17 1384 0 1314 -3 1314 55 0 12
+              -32 178 -70 369 -39 190 -70 348 -70 351 0 3 283 5 628 5 624 0 629 0 648 21
+              18 20 17 26 -40 312 -33 161 -68 314 -79 340 -33 79 -82 113 -306 210 -111 48
+              -233 99 -271 113 l-70 26 0 56 c0 53 3 59 44 102 62 62 112 150 142 246 20 62
+              32 85 51 95 13 7 36 33 50 56 21 37 24 51 19 96 -3 28 -10 126 -15 217 -7 124
+              -14 183 -31 235 -113 359 -400 489 -743 336 -52 -23 -68 -26 -102 -18 -87 19
+              -178 -13 -239 -84 -74 -87 -108 -235 -106 -464 1 -92 -3 -168 -11 -197 -10
+              -41 -10 -53 5 -92 10 -25 34 -60 55 -78 27 -24 42 -49 55 -93 27 -90 81 -186
+              142 -253 49 -55 54 -64 54 -106 0 -43 -3 -47 -32 -61 -37 -16 -437 -185 -455
+              -192 -6 -2 -1 21 12 54 14 32 30 82 36 111 7 28 16 52 20 52 16 0 80 63 96 94
+              20 39 21 132 2 169 -11 21 -13 45 -8 100 4 39 4 119 -2 177 -30 339 -207 588
+              -466 655 -130 34 -317 4 -471 -74 -31 -16 -52 -18 -124 -14 -56 4 -103 1 -133
+              -7 -54 -15 -126 -75 -161 -136 -37 -62 -73 -181 -81 -267 l-7 -72 -8 45 c-26
+              142 -85 277 -154 358 l-34 40 65 105 c36 58 65 111 65 120 0 8 -8 24 -17 35
+              -21 23 -507 212 -544 211 -13 0 -134 -43 -269 -95z m470 -101 c110 -42 200
+              -81 200 -86 0 -8 -101 -179 -115 -195 -2 -2 -53 4 -114 14 l-111 17 0 37 c0
+              36 1 38 40 43 53 7 70 22 70 62 0 40 -14 53 -65 57 -39 3 -40 4 -43 45 -3 43
+              -12 56 -49 67 -33 11 -73 -32 -73 -79 0 -34 -1 -35 -39 -35 -42 0 -71 -25 -71
+              -61 0 -24 47 -59 80 -59 25 0 28 -4 32 -37 3 -21 5 -39 4 -40 -2 -2 -205 -33
+              -217 -33 -8 0 -133 199 -128 204 3 2 369 145 397 155 1 1 92 -33 202 -76z
+              m2758 -8 c103 -47 193 -172 227 -316 18 -80 21 -273 3 -267 -16 6 -26 41 -27
+              94 -1 27 -8 47 -21 59 -19 18 -24 18 -108 2 -165 -32 -306 -18 -416 41 -28 15
+              -82 58 -120 95 -59 59 -72 68 -95 62 -37 -9 -47 -27 -55 -99 -9 -87 -32 -151
+              -71 -191 -55 -59 -58 -53 -52 113 6 174 28 262 82 320 32 36 36 37 92 34 32
+              -2 74 -4 93 -4 21 -1 67 13 115 35 136 62 249 68 353 22z m-1374 -260 c196
+              -51 334 -251 365 -526 12 -106 5 -229 -14 -229 -31 0 -48 28 -52 86 -9 128
+              -14 132 -152 104 -274 -56 -475 -5 -645 162 -80 79 -105 91 -140 65 -13 -10
+              -20 -36 -27 -98 -11 -98 -22 -138 -56 -197 -25 -43 -97 -101 -111 -88 -4 4 -7
+              80 -6 169 1 229 36 360 115 432 48 43 83 47 185 24 48 -11 53 -10 121 24 159
+              80 295 104 417 72z m-1475 -111 l31 -6 -33 -45 c-108 -151 -271 -232 -501
+              -249 -109 -8 -106 -11 -80 77 19 64 57 141 92 188 21 28 26 31 34 17 11 -20
+              45 -20 139 -1 122 24 253 32 318 19z m331 -119 c15 -33 35 -86 43 -117 17 -66
+              16 -67 -54 -43 -92 31 -154 108 -166 204 l-5 47 39 -4 c28 -3 43 1 53 13 13
+              16 16 15 37 -11 13 -16 37 -56 53 -89z m2105 5 c98 -59 172 -75 347 -75 l157
+              1 6 -32 c11 -62 75 -114 140 -114 43 0 29 -44 -21 -65 -36 -15 -45 -30 -63
+              -110 -52 -230 -260 -392 -454 -356 -82 15 -146 49 -208 111 -66 66 -113 151
+              -140 259 -18 71 -37 101 -64 101 -19 0 -47 37 -43 55 2 10 24 25 51 35 27 10
+              63 30 81 44 41 31 90 106 107 164 12 40 13 42 33 27 12 -8 44 -29 71 -45z
+              m-2293 -195 c46 -43 146 -92 201 -102 21 -3 41 -12 44 -20 9 -22 -46 -120 -87
+              -156 -21 -18 -46 -52 -56 -77 -46 -118 -135 -210 -241 -250 -167 -63 -359 31
+              -445 217 -17 38 -53 92 -80 120 -46 50 -78 105 -78 136 0 9 33 16 123 24 67 7
+              149 19 182 28 97 25 215 88 285 153 l64 58 23 -47 c13 -26 42 -64 65 -84z
+              m946 -214 c34 -17 102 -41 150 -52 75 -18 107 -20 227 -16 77 3 149 9 161 12
+              18 6 23 1 32 -37 25 -93 88 -147 175 -148 30 0 37 -4 37 -19 0 -26 -47 -81
+              -70 -81 -28 0 -42 -25 -66 -121 -68 -268 -266 -449 -492 -449 -134 0 -242 50
+              -345 160 -90 95 -129 178 -171 363 -5 21 -18 33 -51 47 -49 21 -71 54 -62 92
+              5 17 20 28 59 42 116 41 197 130 232 255 l17 61 52 -39 c29 -21 80 -53 115
+              -70z m-569 -102 c1 -31 -6 -73 -14 -92 -8 -20 -15 -51 -15 -70 0 -51 46 -134
+              91 -164 22 -14 39 -32 39 -40 0 -34 54 -173 92 -238 23 -38 68 -98 100 -131
+              l59 -62 -3 -73 c-2 -57 -7 -74 -18 -77 -12 -2 -21 20 -38 97 -34 150 -64 184
+              -227 254 -194 84 -179 76 -162 95 40 44 47 85 47 274 0 139 4 199 18 255 19
+              81 29 72 31 -28z m-169 -253 c0 -174 -1 -176 -96 -176 l-64 0 0 51 c0 47 4 55
+              50 106 27 31 62 80 77 109 15 30 29 54 31 54 1 0 2 -65 2 -144z m-794 -26 c41
+              -42 44 -50 44 -98 l0 -52 -68 0 c-40 0 -73 5 -80 12 -8 8 -12 58 -12 157 l0
+              145 36 -60 c19 -32 55 -79 80 -104z m2959 -77 c76 -16 160 -11 229 13 52 19
+              56 18 56 -10 0 -46 -131 -136 -198 -136 -44 0 -97 23 -149 66 -33 28 -43 42
+              -43 66 0 25 3 29 18 23 9 -4 49 -13 87 -22z m-2735 -58 c71 -19 164 -19 226 0
+              63 19 64 19 64 -8 0 -26 -58 -86 -107 -111 -45 -22 -111 -20 -153 5 -59 35
+              -90 70 -90 101 0 15 1 28 3 28 1 0 27 -7 57 -15z m2598 -102 c84 -68 133 -88
+              222 -88 86 0 147 25 231 96 l48 40 88 -34 c168 -66 437 -187 459 -208 33 -31
+              40 -53 92 -311 l48 -238 -617 0 -618 0 -48 30 c-48 29 -553 250 -573 250 -14
+              0 -13 14 10 124 20 100 36 135 73 159 25 16 481 213 525 226 2 1 29 -20 60
+              -46z m-2684 -77 c75 -61 130 -80 213 -74 77 6 133 30 194 85 39 35 40 36 82
+              23 43 -13 364 -148 428 -181 50 -25 67 -55 88 -161 11 -51 19 -93 18 -94 -1
+              -1 -108 -47 -237 -103 -129 -56 -257 -115 -283 -131 l-48 -30 -565 0 c-477 0
+              -564 2 -564 14 0 8 20 112 44 232 40 196 47 220 73 245 17 16 109 61 233 114
+              113 47 214 90 225 95 34 15 44 11 99 -34z m1362 -308 c87 -32 285 -32 364 0
+              30 12 58 22 63 22 4 0 7 -18 7 -39 0 -34 -6 -45 -55 -89 -138 -126 -262 -127
+              -395 -3 -45 42 -50 52 -50 89 0 23 2 42 3 42 2 0 30 -10 63 -22z m632 -217 c3
+              -18 -2 -21 -35 -21 -47 0 -100 -26 -126 -61 -23 -32 -137 -438 -137 -489 0
+              -74 69 -150 135 -150 41 0 57 19 53 61 -2 24 -11 37 -33 49 -16 9 -31 24 -33
+              33 -4 17 94 389 110 421 8 15 17 17 52 13 76 -11 173 -46 178 -65 5 -19 -99
+              -410 -114 -429 -6 -7 -28 -13 -49 -13 -28 0 -42 -6 -53 -22 -69 -98 107 -138
+              193 -45 24 26 48 101 116 363 36 140 36 182 -4 231 -23 27 -81 63 -103 63 -10
+              0 -18 6 -18 14 0 15 363 -138 410 -173 47 -35 62 -79 121 -369 32 -158 61
+              -297 64 -310 l5 -22 -1180 0 c-649 0 -1180 2 -1180 4 0 10 112 556 121 591 15
+              55 52 101 102 127 23 11 117 53 208 93 l166 73 5 -102 c4 -74 12 -119 31 -169
+              22 -62 24 -71 11 -95 -8 -15 -14 -51 -14 -80 0 -116 86 -202 203 -202 156 0
+              252 163 177 300 -43 77 -136 121 -212 102 -39 -10 -40 -10 -56 26 -19 44 -28
+              215 -14 253 7 18 24 30 65 44 l54 18 64 -53 c96 -80 172 -112 264 -112 65 0
+              85 5 147 34 40 19 98 57 128 85 l55 50 60 -22 c44 -17 61 -28 63 -44z m-751
+              -410 c39 -24 51 -67 29 -109 -17 -33 -34 -42 -79 -42 -69 0 -105 91 -54 137
+              40 37 61 40 104 14z"/>
+              <path d="M4340 1500 c-16 -16 -20 -33 -20 -80 l0 -60 -52 0 c-71 0 -102 -17
+              -106 -56 -5 -48 18 -64 94 -64 l64 0 0 -63 c0 -76 14 -100 60 -100 46 0 60 24
+              60 100 l0 63 64 0 c70 0 96 14 96 54 0 44 -23 60 -94 64 l-66 4 0 59 c0 64
+              -21 99 -60 99 -11 0 -29 -9 -40 -20z"/>
+              </g>
+          </svg>
+          </div>
+          <h3 class="team-card-name">Equipe Médica e Apoio</h3>
+          <p class="team-card-role">E demais médicos examinadores. <br> Contamos ainda com a equipe de conservação, limpeza e motoboy.</p>
+           <span></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contact-cta">
+      <h1 class="contact-cta-heading">
+        Cuidar da sua equipe é investir no sucesso da sua empresa. 
+        Oferecemos soluções completas em Segurança e Saúde Ocupacional, garantindo ambientes de trabalho mais seguros,
+        saudáveis e produtivos.
+      </h1>
+    </div>
+
+  </section>
+
+  <section id="localizacao" class="location-section">
+    <div class="location-shell">
+      <div class="location-header">
+        <p class="location-label">SOBRE A CLÍNICA</p>
+        <div class="location-divider"></div>
+        <h2 class="location-title">Nossa Localização</h2>
+      </div>
+    </div>
+  
+    <div class="location-shell location-map-wrapper">
+      <div class="location-map-inner">
+        <div class="location-map-frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.0436208995775!2d-48.5538063!3d-27.5921772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95273821ff99eed1%3A0x8a451f2f26197274!2sPrevenir!5e0!3m2!1spt-BR!2sbr!4v1760356921418!5m2!1spt-BR!2sbr"
+                  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!--Não exebi o mapa no IE-->
+    <script>
+      var isIE = /MSIE|Trident/.test(navigator.userAgent);
+
+      if (isIE) {
+        document.querySelector(".location-map-inner").style.display = "none";
+      }
+    </script>
+  
+    <div class="location-shell location-info-wrapper">
+      <div class="location-info-card">
+        <div class="location-info-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-map-2 text-white w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5" />
+            <path d="M9 4v13" />
+            <path d="M15 7v5.5" />
+            <path
+              d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" />
+            <path d="M19 18v.01" />
+          </svg>
+        </div>
+        <h3 class="location-info-text">
+          INFORMAÇÕES GERAIS
+        </h3>
+      </div>
+  
+      <div class="">
+         <div class="location-info-details">
+          <p><span style="font-weight: 600;">HORÁRIO DE FUNCIONAMENTO:</span> DE SEGUNDA SEXTA DAS 08:00 AS 12:00 E DAS 13:00 AS 17:00</p>
+          <p><span style="font-weight: 600;">CONTAMOS COM UNIDADES:</span> FLORIANÓPOLIS, PALHOÇA E BIGUAÇU</p>
+          <p><span style="font-weight: 600;">ENDEREÇO MATRIZ</span> – AVENIDA RIO BRANCO, 448, SALA 106. CENTRO, FLORIANÓPOLIS. CEP: 88015-200</p>
+          <p><span style="font-weight: 600;">EMAIL:</span> comercial@prevenirsst.com.br</p>
+          <p><span style="font-weight: 600;">CONTATO WHATSAPP:</span> 48 99812 01 56 (agendamento)</p>
+          <p><span style="font-weight: 600;">48 99912 6850</span> (comercial)</p>
+          <p><span style="font-weight: 600;">TELEFONE FIXO:</span> 48 3025 7498/ 3025 74 97</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="contact-shell">
+      <div class="contact-header">
+        <p class="contact-label">FALE CONOSCO</p>
+        <div class="contact-divider"></div>
+        <h2 class="contact-title">Entre em Contato</h2>
+      </div>
+  
+      <div class="contact-body">
+        <div class="contact-image-wrapper">
+          <div class="contact-image-box">
+            <img src="src/images/Balconistas.jpeg" alt="Atedente">
+          </div>
+        </div>
+  
+        <div class="contact-form-wrapper">
+          <form class="contact-form-grid">
+              <div class="contact-field">
+                <input type="text" id="contact-name" class="contact-input" placeholder=" " required>
+                <label for="contact-name" class="contact-label-floating">Nome Completo</label>
+              </div>
+
+              <div class="contact-field">
+                <input type="email" id="contact-email" class="contact-input" placeholder=" " required>
+                <label for="contact-email" class="contact-label-floating">Endereço de Email</label>
+              </div>
+
+              <div class="contact-field contact-field--full">
+                <input type="tel" id="contact-phone" class="contact-input" placeholder=" ">
+                <label for="contact-phone" class="contact-label-floating">Telefone (Opcional)</label>
+              </div>
+
+              <div class="contact-field contact-field--full">
+                <textarea id="contact-message" class="contact-textarea" placeholder=" " required></textarea>
+                <label for="contact-message" class="contact-label-floating">Sua Mensagem</label>
+              </div>
+
+              <div class="contact-form-footer contact-field--full">
+                <button type="submit" class="contact-submit">Enviar Mensagem</button>
+              </div>
+            </form>
+        </div>
+      </div>
+  
+      <div class="contact-cta">
+        <h1 class="contact-cta-heading">
+          <span class="contact-cta-highlight">Prevenir Saúde Ocupacional :</span>
+          cuidado completo com a saúde e segurança do trabalho, com expertise e confiança.
+          Segurança, Saúde e Conformidade — tudo em um só lugar.
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner de Cookies -->
+  <div id="cookie-banner">
+    <div>
+      <p>
+        Usamos cookies para melhorar sua experiência no site. Ao continuar, você concorda com o uso de cookies.
+      </p>
+
+      <a href="./src/pdf/Documento LGPD Prevenir.pdf" download class="termo-text">
+        Termos LGPD
+      </a>
+    </div>
+
+    <div class="cookie-buttons">
+      <button id="accept-cookies">Aceitar</button>
+      <button id="decline-cookies">Recusar</button>
+    </div>
+  </div>
+
+  <script>
+    function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length === 2) {
+      return parts.pop().split(";").shift();
+    }
+  }
+
+  function setCookie(name, value, days) {
+    var expires = new Date(Date.now() + days * 864e5).toUTCString();
+    document.cookie = name + "=" + value + "; expires=" + expires + "; path=/";
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var banner = document.getElementById("cookie-banner");
+    var accepted = getCookie("cookie_consent");
+
+    // Se o usuário nunca respondeu, mostra o banner
+    if (!accepted) {
+      banner.className = banner.className.replace("hidden-state", "");
+      banner.className += " visible-state";
+    }
+
+    function hideBanner() {
+      // inicia a animação para baixo
+      banner.className = banner.className.replace("visible-state", "");
+      banner.className += " hidden-state";
+
+      // após 300ms remove da tela
+      setTimeout(function () {
+        banner.className += " display-none";
+      }, 300);
+    }
+
+    document.getElementById("accept-cookies").onclick = function () {
+      setCookie("cookie_consent", "accepted", 1);
+      hideBanner();
+    };
+
+    document.getElementById("decline-cookies").onclick = function () {
+      setCookie("cookie_consent", "declined", 1);
+      hideBanner();
+    };
+  });
+  </script>
+
+  <!-- Footer -->
+  <footer>
+  <div class="footer-container">
+
+    <div class="footer-logo">
+      <img src="src/images/white-logo.png" alt="logo-tipo">
+
+      <!-- LINKS LOGO ABAIXO DA LOGO -->
+      <div class="footer-links">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">Clínica</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="/politica.html">Política de Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-info">
+      <span style="font-weight: 700;">DADOS DA PREVENIR SAÚDE OCUPACIONAL LTDA:</span><br>
+      <span style="font-weight: 700;">CNPJ:</span> 10 314 933/001-16<br>
+      <div style="margin-top: 12px;"><span style="font-weight: 700; ">RESPONSÁVEL TÉCNICO:</span><br>
+      DR. FÁBIO SATAKE GONÇALVES<br>
+      CRM/ SC 15 915 RQE 16535
+      </div>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contato</h4>
+      <div style="line-height: 1.6;">
+        <p><span style="font-weight: 600;">Email:</span> comercial@prevenirsst.com.br</p>
+        <p><span style="font-weight: 600;">Contato Whatsapp:</span> 48 99812 01 56 (agendamento)</p>
+        <p><span style="font-weight: 600;">48 99912 6850</span> (comercial)</p>
+        <p><span style="font-weight: 600;">Telefone Fixo:</span> 48 3025 7498/ 3025 74 97</p>
+      </div>
+
+      <div class="footer-ed-logo" style="margin-top: 35%;">
+        <a href="https://equipedigital.com/" target="_blank">
+          <img src="src/images/ed-logo.png" alt="Medixo">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
