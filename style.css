@@ -2043,6 +2043,14 @@
   }
 }
 
+@media (max-width: 768px) {
+  .footer-links h4,
+  .footer-links ul,
+  .footer-links ul li {
+    text-align: start;
+  }
+}
+
 .footer-contact img {
   width: 11rem;
 }
