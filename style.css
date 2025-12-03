@@ -2541,3 +2541,48 @@
   overflow-wrap: break-word;
 }
 
+/* Área dos botões */
+.cookie-buttons-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos comuns para os botões */
+.cookie-buttons-two .btn-cookie {
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+  border-radius: 4px; /* opcional – visual mais bonito */
+}
+
+/* Botão aceitar cookies */
+.btn-accept-cookie {
+  background: var(--primary, #2490E3);
+}
+.btn-accept-cookie:hover {
+  background: #2563eb;
+}
+
+/* Botão recusar cookies */
+.btn-decline-cookie {
+  background: var(--primary-red, #E30005);
+  margin-left: 0.5rem;
+  width: 90px;
+  display: flex;          /* 🔥 vira flex container */
+  justify-content: center; /* 🔥 centraliza horizontal */
+  align-items: center;     /* 🔥 centraliza vertical */
+  text-align: center;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.btn-decline-cookie:hover {
+  background: #dc2626;
+  text-decoration: none;
+}
