@@ -2586,3 +2586,12 @@
   background: #dc2626;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  .cookie-privacy-link {
+    display: block;        /* permite centralizar */
+    text-align: center;    /* centraliza texto */
+    margin: 0 auto;        /* centraliza o elemento */
+    padding: 10px;
+  }
+}
