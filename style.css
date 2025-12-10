@@ -1090,8 +1090,8 @@
     color: #4b5563;
     margin-bottom: 1rem;
     flex-grow: 1;
-    word-break: break-word;
-    text-align: justify;
+    word-break: normal;
+    text-align: start;
   }
 
   .services-card-button {
@@ -2594,4 +2594,8 @@
     margin: 0 auto;        /* centraliza o elemento */
     padding: 10px;
   }
+}
+
+.indent {
+  padding-left: 0.5rem; /* ajuste como quiser */
 }
