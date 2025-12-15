@@ -3,7 +3,7 @@ window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-HHBS89QEDV');
+  gtag('config', 'G-W94HVDVD1L');
 
 // MODAL MOBILE MENU
 const menuBtn = document.getElementById("menu-btn");
