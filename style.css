@@ -15,6 +15,14 @@
     center center / cover no-repeat;
   z-index: 0; 
   height: 663px;
+  
+}
+
+@media (max-width: 1023px) {
+  .hero-overlay-bg {
+    position: relative;
+    padding-bottom: 87px;
+  }
 }
 
 .hero-overlay-bg::before {
@@ -581,6 +589,7 @@
   @media (min-width: 1024px) {
     .hero-banner-image {
       width: 31.25rem;
+      margin-bottom: 140px;
     }
   }
 
