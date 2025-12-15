@@ -1,3 +1,10 @@
+// Tag google manager
+window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HHBS89QEDV');
+
 // MODAL MOBILE MENU
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
