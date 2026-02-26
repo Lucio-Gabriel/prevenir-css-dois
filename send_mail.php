@@ -77,7 +77,8 @@ $smtpSecure = 'tls';
 $smtpUser = 'noreply@equipedigital.com';
 $smtpPass = '@Noreply2023*';
 $smtpFrom = $smtpUser;
-$smtpTo = 'suporte@equipedigital.com.br';
+//$smtpTo = 'suporte@equipedigital.com.br';
+$smtpTo = 'prevenir@prevenirsst.com.br';
 
 $subject = 'Novo contato - Site Prevenir';
 $bodyText = "Novo contato pelo site:\r\n\r\n"
