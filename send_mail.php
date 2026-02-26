@@ -112,7 +112,16 @@ function sendBySmtp($config)
     $port = isset($config['port']) ? (int)$config['port'] : 0;
 
     $remoteSocket = ($secure === 'ssl' ? 'ssl://' : '') . $host . ':' . $port;
-    $socket = @stream_socket_client($remoteSocket, $errno, $errstr, 20);
+    $context = stream_context_create(array(
+        'ssl' => array(
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true,
+            'SNI_enabled' => true,
+            'peer_name' => $host
+        )
+    ));
+    $socket = @stream_socket_client($remoteSocket, $errno, $errstr, 20, STREAM_CLIENT_CONNECT, $context);
 
     if (!$socket) {
         return array(
@@ -159,7 +168,7 @@ function sendBySmtp($config)
             );
         }
 
-        $cryptoEnabled = @stream_socket_enable_crypto($socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT);
+        $cryptoEnabled = enableTlsCrypto($socket);
         if ($cryptoEnabled !== true) {
             fclose($socket);
             return array(
@@ -313,3 +322,34 @@ function encodeHeader($value)
     return '=?UTF-8?B?' . base64_encode((string)$value) . '?=';
 }
 
+function enableTlsCrypto($socket)
+{
+    $methods = array();
+
+    if (defined('STREAM_CRYPTO_METHOD_TLS_CLIENT')) {
+        $methods[] = STREAM_CRYPTO_METHOD_TLS_CLIENT;
+    }
+    if (defined('STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT')) {
+        $methods[] = STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT;
+    }
+    if (defined('STREAM_CRYPTO_METHOD_TLSv1_1_CLIENT')) {
+        $methods[] = STREAM_CRYPTO_METHOD_TLSv1_1_CLIENT;
+    }
+    if (defined('STREAM_CRYPTO_METHOD_TLSv1_0_CLIENT')) {
+        $methods[] = STREAM_CRYPTO_METHOD_TLSv1_0_CLIENT;
+    }
+
+    if (empty($methods)) {
+        return false;
+    }
+
+    $methods = array_unique($methods);
+    foreach ($methods as $method) {
+        $enabled = @stream_socket_enable_crypto($socket, true, $method);
+        if ($enabled === true) {
+            return true;
+        }
+    }
+
+    return false;
+}
