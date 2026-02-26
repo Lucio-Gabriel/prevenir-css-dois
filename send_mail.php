@@ -1,17 +1,17 @@
 <?php
-declare(strict_types=1);
 
 ini_set('display_errors', '0');
 ob_start();
 
-register_shutdown_function(static function (): void {
+register_shutdown_function(function () {
     $error = error_get_last();
     if ($error === null) {
         return;
     }
 
-    $fatalTypes = [E_ERROR, E_PARSE, E_CORE_ERROR, E_COMPILE_ERROR, E_USER_ERROR];
-    if (!in_array($error['type'] ?? 0, $fatalTypes, true)) {
+    $errorType = isset($error['type']) ? $error['type'] : 0;
+    $fatalTypes = array(E_ERROR, E_PARSE, E_CORE_ERROR, E_COMPILE_ERROR, E_USER_ERROR);
+    if (!in_array($errorType, $fatalTypes, true)) {
         return;
     }
 
@@ -22,55 +22,55 @@ register_shutdown_function(static function (): void {
     if (!headers_sent()) {
         http_response_code(500);
         header('Content-Type: application/json; charset=utf-8');
+        header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
     }
 
-    echo json_encode([
+    echo json_encode(array(
         'success' => false,
         'message' => 'Erro interno no envio de email.'
-    ]);
+    ));
 });
 
 header('Content-Type: application/json; charset=utf-8');
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+if (!isset($_SERVER['REQUEST_METHOD']) || $_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
-    echo json_encode([
+    echo json_encode(array(
         'success' => false,
         'message' => 'Metodo nao permitido.'
-    ]);
+    ));
     exit;
 }
 
 $rawInput = file_get_contents('php://input');
-$data = json_decode($rawInput ?: '', true);
-if (!is_array($data)) {
-    $data = $_POST;
-}
+$decoded = json_decode($rawInput ? $rawInput : '', true);
+$data = is_array($decoded) ? $decoded : $_POST;
 
-$name = trim((string)($data['name'] ?? ''));
-$email = trim((string)($data['email'] ?? ''));
-$phone = trim((string)($data['phone'] ?? ''));
-$message = trim((string)($data['message'] ?? ''));
+$name = isset($data['name']) ? trim((string)$data['name']) : '';
+$email = isset($data['email']) ? trim((string)$data['email']) : '';
+$phone = isset($data['phone']) ? trim((string)$data['phone']) : '';
+$message = isset($data['message']) ? trim((string)$data['message']) : '';
 
 if ($name === '' || $email === '' || $message === '') {
     http_response_code(422);
-    echo json_encode([
+    echo json_encode(array(
         'success' => false,
         'message' => 'Preencha nome, email e mensagem.'
-    ]);
+    ));
     exit;
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     http_response_code(422);
-    echo json_encode([
+    echo json_encode(array(
         'success' => false,
         'message' => 'Informe um email valido.'
-    ]);
+    ));
     exit;
 }
 
-// Credenciais SMTP (igual ao sistema antigo).
+// Credenciais SMTP atuais.
 $smtpHost = 'email-ssl.com.br';
 $smtpPort = 587;
 $smtpSecure = 'tls';
@@ -78,7 +78,6 @@ $smtpUser = 'noreply@equipedigital.com';
 $smtpPass = '@Noreply2023*';
 $smtpFrom = $smtpUser;
 $smtpTo = 'suporte@equipedigital.com.br';
-// $smtpTo = 'prevenir@prevenirsst.com.br';
 
 $subject = 'Novo contato - Site Prevenir';
 $bodyText = "Novo contato pelo site:\r\n\r\n"
@@ -87,7 +86,7 @@ $bodyText = "Novo contato pelo site:\r\n\r\n"
     . "Telefone: " . ($phone !== '' ? $phone : 'Nao informado') . "\r\n\r\n"
     . "Mensagem:\r\n{$message}\r\n";
 
-$result = sendBySmtp([
+$result = sendBySmtp(array(
     'host' => $smtpHost,
     'port' => $smtpPort,
     'secure' => $smtpSecure,
@@ -98,171 +97,186 @@ $result = sendBySmtp([
     'replyTo' => $email,
     'subject' => $subject,
     'bodyText' => $bodyText
-]);
+));
 
-if (!$result['success']) {
+if (!isset($result['success']) || !$result['success']) {
     http_response_code(500);
 }
 
 echo json_encode($result);
 
-function sendBySmtp(array $config): array
+function sendBySmtp($config)
 {
-    $secure = strtolower((string)($config['secure'] ?? ''));
-    $remoteSocket = ($secure === 'ssl' ? 'ssl://' : '') . $config['host'] . ':' . (int)$config['port'];
+    $secure = isset($config['secure']) ? strtolower((string)$config['secure']) : '';
+    $host = isset($config['host']) ? $config['host'] : '';
+    $port = isset($config['port']) ? (int)$config['port'] : 0;
+
+    $remoteSocket = ($secure === 'ssl' ? 'ssl://' : '') . $host . ':' . $port;
     $socket = @stream_socket_client($remoteSocket, $errno, $errstr, 20);
 
     if (!$socket) {
-        return [
+        return array(
             'success' => false,
             'message' => 'Nao foi possivel conectar ao servidor SMTP.'
-        ];
+        );
     }
 
     stream_set_timeout($socket, 20);
 
     $greeting = smtpRead($socket);
-    if (!smtpOk($greeting, ['220'])) {
+    if (!smtpOk($greeting, array('220'))) {
         fclose($socket);
-        return [
+        return array(
             'success' => false,
             'message' => 'Resposta inicial invalida do SMTP.'
-        ];
+        );
     }
 
-    $hostname = gethostname() ?: 'localhost';
+    $hostname = function_exists('gethostname') ? gethostname() : 'localhost';
+    if (!$hostname) {
+        $hostname = 'localhost';
+    }
+
     $ehlo = smtpCommand($socket, 'EHLO ' . $hostname);
-    if (!smtpOk($ehlo, ['250'])) {
+    if (!smtpOk($ehlo, array('250'))) {
         $helo = smtpCommand($socket, 'HELO ' . $hostname);
-        if (!smtpOk($helo, ['250'])) {
+        if (!smtpOk($helo, array('250'))) {
             fclose($socket);
-            return [
+            return array(
                 'success' => false,
                 'message' => 'Falha no handshake com SMTP.'
-            ];
+            );
         }
     }
 
     if ($secure === 'tls') {
         $startTls = smtpCommand($socket, 'STARTTLS');
-        if (!smtpOk($startTls, ['220'])) {
+        if (!smtpOk($startTls, array('220'))) {
             fclose($socket);
-            return [
+            return array(
                 'success' => false,
                 'message' => 'Servidor nao aceitou STARTTLS.'
-            ];
+            );
         }
 
         $cryptoEnabled = @stream_socket_enable_crypto($socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT);
         if ($cryptoEnabled !== true) {
             fclose($socket);
-            return [
+            return array(
                 'success' => false,
                 'message' => 'Falha ao habilitar criptografia TLS.'
-            ];
+            );
         }
 
         $ehloTls = smtpCommand($socket, 'EHLO ' . $hostname);
-        if (!smtpOk($ehloTls, ['250'])) {
+        if (!smtpOk($ehloTls, array('250'))) {
             fclose($socket);
-            return [
+            return array(
                 'success' => false,
                 'message' => 'Falha no EHLO apos STARTTLS.'
-            ];
+            );
         }
     }
 
     $auth = smtpCommand($socket, 'AUTH LOGIN');
-    if (!smtpOk($auth, ['334'])) {
+    if (!smtpOk($auth, array('334'))) {
         fclose($socket);
-        return [
+        return array(
             'success' => false,
             'message' => 'Servidor nao aceitou autenticacao SMTP.'
-        ];
+        );
     }
 
-    $userStep = smtpCommand($socket, base64_encode((string)$config['username']));
-    if (!smtpOk($userStep, ['334'])) {
+    $username = isset($config['username']) ? (string)$config['username'] : '';
+    $userStep = smtpCommand($socket, base64_encode($username));
+    if (!smtpOk($userStep, array('334'))) {
         fclose($socket);
-        return [
+        return array(
             'success' => false,
             'message' => 'Usuario SMTP rejeitado.'
-        ];
+        );
     }
 
-    $passStep = smtpCommand($socket, base64_encode((string)$config['password']));
-    if (!smtpOk($passStep, ['235'])) {
+    $password = isset($config['password']) ? (string)$config['password'] : '';
+    $passStep = smtpCommand($socket, base64_encode($password));
+    if (!smtpOk($passStep, array('235'))) {
         fclose($socket);
-        return [
+        return array(
             'success' => false,
             'message' => 'Senha SMTP rejeitada.'
-        ];
+        );
     }
 
-    $mailFrom = smtpCommand($socket, 'MAIL FROM:<' . $config['from'] . '>');
-    if (!smtpOk($mailFrom, ['250'])) {
+    $from = isset($config['from']) ? $config['from'] : '';
+    $mailFrom = smtpCommand($socket, 'MAIL FROM:<' . $from . '>');
+    if (!smtpOk($mailFrom, array('250'))) {
         fclose($socket);
-        return [
+        return array(
             'success' => false,
             'message' => 'Erro no remetente do email.'
-        ];
+        );
     }
 
-    $rcptTo = smtpCommand($socket, 'RCPT TO:<' . $config['to'] . '>');
-    if (!smtpOk($rcptTo, ['250', '251'])) {
+    $to = isset($config['to']) ? $config['to'] : '';
+    $rcptTo = smtpCommand($socket, 'RCPT TO:<' . $to . '>');
+    if (!smtpOk($rcptTo, array('250', '251'))) {
         fclose($socket);
-        return [
+        return array(
             'success' => false,
             'message' => 'Erro no destinatario do email.'
-        ];
+        );
     }
 
     $dataStart = smtpCommand($socket, 'DATA');
-    if (!smtpOk($dataStart, ['354'])) {
+    if (!smtpOk($dataStart, array('354'))) {
         fclose($socket);
-        return [
+        return array(
             'success' => false,
             'message' => 'Servidor nao aceitou corpo do email.'
-        ];
+        );
     }
 
-    $headers = [];
-    $headers[] = 'From: Prevenir Site <' . $config['from'] . '>';
-    $headers[] = 'To: <' . $config['to'] . '>';
-    $headers[] = 'Reply-To: <' . $config['replyTo'] . '>';
-    $headers[] = 'Subject: ' . encodeHeader((string)$config['subject']);
+    $replyTo = isset($config['replyTo']) ? $config['replyTo'] : '';
+    $subject = isset($config['subject']) ? (string)$config['subject'] : '';
+    $bodyText = isset($config['bodyText']) ? (string)$config['bodyText'] : '';
+
+    $headers = array();
+    $headers[] = 'From: Prevenir Site <' . $from . '>';
+    $headers[] = 'To: <' . $to . '>';
+    $headers[] = 'Reply-To: <' . $replyTo . '>';
+    $headers[] = 'Subject: ' . encodeHeader($subject);
     $headers[] = 'MIME-Version: 1.0';
     $headers[] = 'Content-Type: text/plain; charset=UTF-8';
     $headers[] = 'Content-Transfer-Encoding: 8bit';
     $headers[] = 'Date: ' . date(DATE_RFC2822);
 
-    $payload = implode("\r\n", $headers) . "\r\n\r\n" . normalizeBody((string)$config['bodyText']) . "\r\n.";
+    $payload = implode("\r\n", $headers) . "\r\n\r\n" . normalizeBody($bodyText) . "\r\n.";
     fwrite($socket, $payload . "\r\n");
     $dataEnd = smtpRead($socket);
 
     smtpCommand($socket, 'QUIT');
     fclose($socket);
 
-    if (!smtpOk($dataEnd, ['250'])) {
-        return [
+    if (!smtpOk($dataEnd, array('250'))) {
+        return array(
             'success' => false,
             'message' => 'Servidor SMTP rejeitou o envio.'
-        ];
+        );
     }
 
-    return [
+    return array(
         'success' => true,
         'message' => 'Mensagem enviada com sucesso.'
-    ];
+    );
 }
 
-function smtpCommand($socket, string $command): string
+function smtpCommand($socket, $command)
 {
     fwrite($socket, $command . "\r\n");
     return smtpRead($socket);
 }
 
-function smtpRead($socket): string
+function smtpRead($socket)
 {
     $response = '';
     while (!feof($socket)) {
@@ -278,20 +292,24 @@ function smtpRead($socket): string
     return $response;
 }
 
-function smtpOk(string $response, array $expectedCodes): bool
+function smtpOk($response, $expectedCodes)
 {
-    $code = substr(trim($response), 0, 3);
+    $code = substr(trim((string)$response), 0, 3);
     return in_array($code, $expectedCodes, true);
 }
 
-function normalizeBody(string $text): string
+function normalizeBody($text)
 {
-    $text = str_replace(["\r\n", "\r"], "\n", $text);
-    $text = preg_replace('/^\./m', '..', $text) ?? $text;
+    $text = str_replace(array("\r\n", "\r"), "\n", (string)$text);
+    $fixed = preg_replace('/^\./m', '..', $text);
+    if ($fixed !== null) {
+        $text = $fixed;
+    }
     return str_replace("\n", "\r\n", $text);
 }
 
-function encodeHeader(string $value): string
+function encodeHeader($value)
 {
-    return '=?UTF-8?B?' . base64_encode($value) . '?=';
+    return '=?UTF-8?B?' . base64_encode((string)$value) . '?=';
 }
+
