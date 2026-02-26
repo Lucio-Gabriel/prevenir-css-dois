@@ -1559,30 +1559,31 @@
         </div>
   
         <div class="contact-form-wrapper">
-          <form class="contact-form-grid">
+          <form id="contact-form" class="contact-form-grid">
               <div class="contact-field">
-                <input type="text" id="contact-name" class="contact-input" placeholder=" " required>
+                <input type="text" id="contact-name" name="name" class="contact-input" placeholder=" " >
                 <label for="contact-name" class="contact-label-floating">Nome Completo</label>
               </div>
 
               <div class="contact-field">
-                <input type="email" id="contact-email" class="contact-input" placeholder=" " required>
+                <input type="email" id="contact-email" name="email" class="contact-input" placeholder=" " >
                 <label for="contact-email" class="contact-label-floating">Endereço de Email</label>
               </div>
 
               <div class="contact-field contact-field--full">
-                <input type="tel" id="contact-phone" class="contact-input" placeholder=" ">
+                <input type="tel" id="contact-phone" name="phone" class="contact-input" placeholder=" ">
                 <label for="contact-phone" class="contact-label-floating">Telefone (Opcional)</label>
               </div>
 
               <div class="contact-field contact-field--full">
-                <textarea id="contact-message" class="contact-textarea" placeholder=" " required></textarea>
+                <textarea id="contact-message" name="message" class="contact-textarea" placeholder=" " ></textarea>
                 <label for="contact-message" class="contact-label-floating">Sua Mensagem</label>
               </div>
 
               <div class="contact-form-footer contact-field--full">
                 <button type="submit" class="contact-submit">Enviar Mensagem</button>
               </div>
+              <p id="contact-feedback" class="contact-field--full" aria-live="polite"></p>
             </form>
         </div>
       </div>

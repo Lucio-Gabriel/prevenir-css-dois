@@ -155,3 +155,74 @@ var isIE = /MSIE|Trident/.test(navigator.userAgent);
 if (isIE) {
   document.querySelector(".location-map-inner").style.display = "none";
 }
+
+// ENVIO DO FORMULARIO DE CONTATO
+(function () {
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+
+  const submitButton = form.querySelector(".contact-submit");
+  const feedback = document.getElementById("contact-feedback");
+
+  function showFeedback(message, isError) {
+    if (!feedback) return;
+    feedback.textContent = message;
+    feedback.style.marginTop = "0.75rem";
+    feedback.style.fontWeight = "700";
+    feedback.style.color = isError ? "#c62828" : "#2e7d32";
+  }
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("contact-name")?.value.trim() || "";
+    const email = document.getElementById("contact-email")?.value.trim() || "";
+    const phone = document.getElementById("contact-phone")?.value.trim() || "";
+    const message = document.getElementById("contact-message")?.value.trim() || "";
+
+    if (!name || !email || !message) {
+      showFeedback("Preencha nome, email e mensagem.", true);
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Enviando...";
+    showFeedback("Enviando mensagem...", false);
+
+    try {
+      const response = await fetch("send_mail.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, email, phone, message })
+      });
+
+      const raw = await response.text();
+      let result = null;
+      if (raw) {
+        try {
+          result = JSON.parse(raw);
+        } catch (parseError) {
+          throw new Error("Resposta invalida do servidor. Verifique se o PHP esta ativo.");
+        }
+      }
+
+      if (!result) {
+        throw new Error("Servidor retornou resposta vazia.");
+      }
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || ("Falha ao enviar o email (HTTP " + response.status + ")."));
+      }
+
+      form.reset();
+      showFeedback("Mensagem enviada com sucesso. Em breve retornaremos.", false);
+    } catch (error) {
+      showFeedback(error.message || "Nao foi possivel enviar. Tente novamente.", true);
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = "Enviar Mensagem";
+    }
+  });
+})();
